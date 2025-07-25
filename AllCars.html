@@ -1,0 +1,1789 @@
+<!DOCTYPE html>
+<!-- saved from url=(0040)http://localhost/First_Data/All_Cars.php -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <title>BMW Gallery</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Bootstrap 5 CSS -->
+  <link href="./AllCars_files/bootstrap.min.css" rel="stylesheet">
+  <style>
+    .card img {
+      cursor: pointer;
+    }
+    .modal-body img {
+      object-fit: contain;
+    }
+  </style>
+</head>
+<body class="bg-black text-white">
+
+
+
+    
+    <title>Scroll to Top</title>
+    <!-- Bootstrap 5 CDN -->
+    <link href="./AllCars_files/bootstrap(1).min.css" rel="stylesheet">
+    <style>
+        #scrollTopBtn {
+            background-color: transparent;
+            position: fixed;
+            bottom: 0px;
+            right: 30px;
+            display: none;
+            z-index: 1000;
+        }
+        .tire1{
+            height: 50px;
+            width: 50px;
+            cursor: pointer;
+        }
+    </style>
+
+
+<!-- Scroll To Top Button -->
+<p id="scrollTopBtn">
+        <img src="./AllCars_files/tire5.png" class="tire1">
+      </p>
+<!-- Bootstrap JS + Scroll Script -->
+<script>
+    const scrollTopBtn = document.getElementById("scrollTopBtn");
+
+    // Show button after scrolling down 200px
+    window.onscroll = function () {
+        if (document.documentElement.scrollTop > 200) {
+            scrollTopBtn.style.display = "block";
+        } else {
+            scrollTopBtn.style.display = "none";
+        }
+    };
+
+    // Scroll to top on click
+    scrollTopBtn.onclick = function () {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+    };
+</script>
+
+
+
+<link href="./AllCars_files/bootstrap(1).min.css" rel="stylesheet">
+<link href="./AllCars_files/css2" rel="stylesheet">
+
+<style>
+    * {
+        font-family: 'Poppins', sans-serif;
+    }
+
+    .nav-hover {
+        overflow: hidden;
+        height: 1.5rem;
+        display: inline-block;
+        position: relative;
+    }
+
+    .nav-hover span {
+        display: block;
+        transition: transform 0.3s ease;
+    }
+
+    .nav-hover span:last-child {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+    }
+
+    /* On hover: move both spans */
+    .nav-hover:hover span:first-child {
+        transform: translateY(-100%);
+    }
+
+    .nav-hover:hover span:last-child {
+        transform: translateY(-100%);
+    }
+
+    .hover-zoom:hover {
+        transform: scale(1.05);
+        transition: transform 0.3s ease;
+    }
+
+    .btn-white-glow {
+        background-color: #fff;
+        color: #000;
+        padding: 0.5rem 1rem;
+        border-radius: 999px;
+        /* pill shape */
+        font-weight: 500;
+        width: auto;
+        transition: all 0.3s ease;
+        box-shadow: 0px 0px 30px 7px rgba(255, 255, 255, 0.5);
+    }
+
+    .btn-white-glow:hover {
+        box-shadow: 0px 0px 30px 14px rgba(255, 255, 255, 0.5);
+        background-color: #f1f5f9;
+        /* Bootstrap slate-100 equivalent */
+    }
+
+    .logo_1 {
+        background-color: transparent;
+        color: #000;
+        border-radius: 999px;
+        /* pill shape */
+        font-weight: 500;
+        width: auto;
+        transition: all 0.3s ease;
+    }
+
+    .logo_1:hover {
+        transform: scale(1.2);
+        box-shadow: 0px 0px 30px 14px rgba(255, 255, 255, 0.5);
+        background-color: #f1f5f9;
+        /* Bootstrap slate-100 equivalent */
+    }
+</style>
+
+
+
+    <!-- Navbar -->
+    <nav class="container d-flex align-items-center justify-content-between px-4 py-3 rounded-pill border border-secondary mt-4 mb-5">
+
+        <!-- Logo -->
+        <a href="http://localhost/First_Data/index.php">
+            <img class="logo_1" src="./AllCars_files/Raiyani_Logo.png" width="40" height="40">
+        </a>
+
+        <!-- Desktop Navigation and Buttons -->
+        <div class="d-none d-md-flex align-items-center gap-4 ms-4 position-relative flex-grow-1 justify-content-between">
+
+            <div class="d-flex align-items-center gap-4">
+                <a href="http://localhost/First_Data/index.php" class="nav-hover text-white text-decoration-none position-relative">
+                    <span>Home</span>
+                    <span>Home</span>
+                </a>
+
+                <a href="http://localhost/First_Data/Store_Data.php" class="nav-hover text-white text-decoration-none position-relative">
+                    <span>Store</span>
+                    <span>Store</span>
+                </a>
+
+                <a href="http://localhost/First_Data/Car_Price.php" class="nav-hover text-white text-decoration-none position-relative">
+                    <span>Pricing</span>
+                    <span>Pricing</span>
+                </a>
+            </div>
+
+            <div class="d-flex align-items-center gap-3">
+                
+                                    <span class="text-white me-2">Welcome, naitik07@gmail.com</span>
+                    <a href="http://localhost/First_Data/logOut.php">
+                        <button class="btn btn-outline-danger rounded-pill px-4 py-2">Logout</button>
+                    </a>
+                
+
+            </div>
+        </div>
+
+        <!-- Mobile Toggle Button -->
+        <button class="btn btn-outline-secondary d-md-none" id="menuToggle">
+            <svg class="bi bi-list" width="24" height="24" fill="currentColor" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M2.5 12.5a.5.5 0 0 1 0-1H13.5a.5.5 0 0 1 0 1H2.5zm0-4a.5.5 0 0 1 0-1H13.5a.5.5 0 0 1 0 1H2.5zm0-4a.5.5 0 0 1 0-1H13.5a.5.5 0 0 1 0 1H2.5z"></path>
+            </svg>
+        </button>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div id="mobileMenu" class="d-none flex-column align-items-center gap-3 text-center bg-black text-white mb-4 py-3 rounded">
+        <a href="http://localhost/First_Data/index.php" class="text-white text-decoration-none">Home</a>
+        <a href="http://localhost/First_Data/Store_Data.php" class="text-white text-decoration-none">Store</a>
+        <a href="http://localhost/First_Data/Car_Price.php" class="text-white text-decoration-none">Pricing</a>
+        
+                    <span class="text-white me-2">Welcome, naitik07@gmail.com</span>
+            <a href="http://localhost/First_Data/logOut.php">
+                <button class="btn btn-outline-danger rounded-pill px-4 py-2">Logout</button>
+            </a>
+        
+
+    </div>
+
+    <!-- Toggle Script -->
+    <script>
+        const toggleBtn = document.getElementById('menuToggle');
+        const mobileMenu = document.getElementById('mobileMenu');
+
+        toggleBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('d-none');
+            mobileMenu.classList.toggle('d-flex');
+        });
+    </script>
+
+    
+
+
+<div class="container py-5">
+  <div class="row g-4 justify-content-center">
+
+      <div class="col-12 col-sm-6 col-md-3">
+    <div class="card shadow-lg bg-dark border-0" style="transition: transform 0.2s ease-out; perspective: 1000px; transform: perspective(1000px) rotateX(0deg) rotateY(0deg);" id="tilt-card-0">
+      <img src="./AllCars_files/bmw_vision_neue_klasse_8k-HD.jpg" class="card-img-top rounded-2" style="height: 210px; object-fit: cover;" alt="Car Image 1" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImageModal(&#39;https://www.hdcarwallpapers.com/walls/bmw_vision_neue_klasse_8k-HD.jpg&#39;)">
+    </div>
+  </div>
+  <div class="col-12 col-sm-6 col-md-3">
+    <div class="card shadow-lg bg-dark border-0" style="transition: transform 0.2s ease-out; perspective: 1000px;" id="tilt-card-1">
+      <img src="./AllCars_files/bugatti_tourbillon_cgi-HD.jpg" class="card-img-top rounded-2" style="height: 210px; object-fit: cover;" alt="Car Image 2" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImageModal(&#39;https://www.hdcarwallpapers.com/walls/bugatti_tourbillon_cgi-HD.jpg&#39;)">
+    </div>
+  </div>
+  <div class="col-12 col-sm-6 col-md-3">
+    <div class="card shadow-lg bg-dark border-0" style="transition: transform 0.2s ease-out; perspective: 1000px;" id="tilt-card-2">
+      <img src="./AllCars_files/ferrari_12cilindri_8k-HD.jpg" class="card-img-top rounded-2" style="height: 210px; object-fit: cover;" alt="Car Image 3" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImageModal(&#39;https://www.hdcarwallpapers.com/walls/ferrari_12cilindri_8k-HD.jpg&#39;)">
+    </div>
+  </div>
+  <div class="col-12 col-sm-6 col-md-3">
+    <div class="card shadow-lg bg-dark border-0" style="transition: transform 0.2s ease-out; perspective: 1000px;" id="tilt-card-3">
+      <img src="./AllCars_files/ford_everest_tremor_2024-HD.jpg" class="card-img-top rounded-2" style="height: 210px; object-fit: cover;" alt="Car Image 4" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImageModal(&#39;https://www.hdcarwallpapers.com/walls/ford_everest_tremor_2024-HD.jpg&#39;)">
+    </div>
+  </div>
+  <div class="col-12 col-sm-6 col-md-3">
+    <div class="card shadow-lg bg-dark border-0" style="transition: transform 0.2s ease-out; perspective: 1000px; transform: perspective(1000px) rotateX(0deg) rotateY(0deg);" id="tilt-card-4">
+      <img src="./AllCars_files/mansory_initiate_lamborghini_revuelto_5k-HD.jpg" class="card-img-top rounded-2" style="height: 210px; object-fit: cover;" alt="Car Image 5" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImageModal(&#39;https://www.hdcarwallpapers.com/walls/mansory_initiate_lamborghini_revuelto_5k-HD.jpg&#39;)">
+    </div>
+  </div>
+  <div class="col-12 col-sm-6 col-md-3">
+    <div class="card shadow-lg bg-dark border-0" style="transition: transform 0.2s ease-out; perspective: 1000px; transform: perspective(1000px) rotateX(0deg) rotateY(0deg);" id="tilt-card-5">
+      <img src="./AllCars_files/mercedes_benz_amg_gt_r_4k_3-HD.jpg" class="card-img-top rounded-2" style="height: 210px; object-fit: cover;" alt="Car Image 6" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImageModal(&#39;https://www.hdcarwallpapers.com/walls/mercedes_benz_amg_gt_r_4k_3-HD.jpg&#39;)">
+    </div>
+  </div>
+  <div class="col-12 col-sm-6 col-md-3">
+    <div class="card shadow-lg bg-dark border-0" style="transition: transform 0.2s ease-out; perspective: 1000px;" id="tilt-card-6">
+      <img src="./AllCars_files/ford_mustang_gt_performance_by_alan_mosca_2024_4k-HD.jpg" class="card-img-top rounded-2" style="height: 210px; object-fit: cover;" alt="Car Image 7" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImageModal(&#39;https://www.hdcarwallpapers.com/walls/ford_mustang_gt_performance_by_alan_mosca_2024_4k-HD.jpg&#39;)">
+    </div>
+  </div>
+  <div class="col-12 col-sm-6 col-md-3">
+    <div class="card shadow-lg bg-dark border-0" style="transition: transform 0.2s ease-out; perspective: 1000px;" id="tilt-card-7">
+      <img src="./AllCars_files/range_rover_autobiography_p400_lwb_2022_5k-HD.jpg" class="card-img-top rounded-2" style="height: 210px; object-fit: cover;" alt="Car Image 8" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImageModal(&#39;https://www.hdcarwallpapers.com/walls/range_rover_autobiography_p400_lwb_2022_5k-HD.jpg&#39;)">
+    </div>
+  </div>
+  <div class="col-12 col-sm-6 col-md-3">
+    <div class="card shadow-lg bg-dark border-0" style="transition: transform 0.2s ease-out; perspective: 1000px;" id="tilt-card-8">
+      <img src="./AllCars_files/toyota_supra_classic-HD.jpg" class="card-img-top rounded-2" style="height: 210px; object-fit: cover;" alt="Car Image 9" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImageModal(&#39;https://www.hdcarwallpapers.com/walls/toyota_supra_classic-HD.jpg&#39;)">
+    </div>
+  </div>
+  <div class="col-12 col-sm-6 col-md-3">
+    <div class="card shadow-lg bg-dark border-0" style="transition: transform 0.2s ease-out; perspective: 1000px;" id="tilt-card-9">
+      <img src="./AllCars_files/mercedes_amg_gt2_pro_4k-HD.jpg" class="card-img-top rounded-2" style="height: 210px; object-fit: cover;" alt="Car Image 10" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImageModal(&#39;https://www.hdcarwallpapers.com/walls/mercedes_amg_gt2_pro_4k-HD.jpg&#39;)">
+    </div>
+  </div>
+  <div class="col-12 col-sm-6 col-md-3">
+    <div class="card shadow-lg bg-dark border-0" style="transition: transform 0.2s ease-out; perspective: 1000px;" id="tilt-card-10">
+      <img src="./AllCars_files/bmw_218_gran_coupe_2025-HD.jpg" class="card-img-top rounded-2" style="height: 210px; object-fit: cover;" alt="Car Image 11" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImageModal(&#39;https://www.hdcarwallpapers.com/walls/bmw_218_gran_coupe_2025-HD.jpg&#39;)">
+    </div>
+  </div>
+  <div class="col-12 col-sm-6 col-md-3">
+    <div class="card shadow-lg bg-dark border-0" style="transition: transform 0.2s ease-out; perspective: 1000px;" id="tilt-card-11">
+      <img src="./AllCars_files/bugatti_chiron_pur_sport_5-HD.jpg" class="card-img-top rounded-2" style="height: 210px; object-fit: cover;" alt="Car Image 12" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImageModal(&#39;https://www.hdcarwallpapers.com/walls/bugatti_chiron_pur_sport_5-HD.jpg&#39;)">
+    </div>
+  </div>
+  <div class="col-12 col-sm-6 col-md-3">
+    <div class="card shadow-lg bg-dark border-0" style="transition: transform 0.2s ease-out; perspective: 1000px;" id="tilt-card-12">
+      <img src="./AllCars_files/ferrari_amalfi_2025_9-HD.jpg" class="card-img-top rounded-2" style="height: 210px; object-fit: cover;" alt="Car Image 13" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImageModal(&#39;https://www.hdcarwallpapers.com/walls/ferrari_amalfi_2025_9-HD.jpg&#39;)">
+    </div>
+  </div>
+  <div class="col-12 col-sm-6 col-md-3">
+    <div class="card shadow-lg bg-dark border-0" style="transition: transform 0.2s ease-out; perspective: 1000px;" id="tilt-card-13">
+      <img src="./AllCars_files/custom_ford_bronco_raptor_8k-HD.jpg" class="card-img-top rounded-2" style="height: 210px; object-fit: cover;" alt="Car Image 14" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImageModal(&#39;https://www.hdcarwallpapers.com/walls/custom_ford_bronco_raptor_8k-HD.jpg&#39;)">
+    </div>
+  </div>
+  <div class="col-12 col-sm-6 col-md-3">
+    <div class="card shadow-lg bg-dark border-0" style="transition: transform 0.2s ease-out; perspective: 1000px;" id="tilt-card-14">
+      <img src="./AllCars_files/lamborghini_sian_4k-HD.jpg" class="card-img-top rounded-2" style="height: 210px; object-fit: cover;" alt="Car Image 15" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImageModal(&#39;https://www.hdcarwallpapers.com/walls/lamborghini_sian_4k-HD.jpg&#39;)">
+    </div>
+  </div>
+  <div class="col-12 col-sm-6 col-md-3">
+    <div class="card shadow-lg bg-dark border-0" style="transition: transform 0.2s ease-out; perspective: 1000px;" id="tilt-card-15">
+      <img src="./AllCars_files/ford_mustang_dark_horse_4k_4-HD.jpg" class="card-img-top rounded-2" style="height: 210px; object-fit: cover;" alt="Car Image 16" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImageModal(&#39;https://www.hdcarwallpapers.com/walls/ford_mustang_dark_horse_4k_4-HD.jpg&#39;)">
+    </div>
+  </div>
+  <div class="col-12 col-sm-6 col-md-3">
+    <div class="card shadow-lg bg-dark border-0" style="transition: transform 0.2s ease-out; perspective: 1000px;" id="tilt-card-16">
+      <img src="./AllCars_files/range_rover_sport_svr_carbon_edition_2021_5k-HD.jpg" class="card-img-top rounded-2" style="height: 210px; object-fit: cover;" alt="Car Image 17" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImageModal(&#39;https://www.hdcarwallpapers.com/walls/range_rover_sport_svr_carbon_edition_2021_5k-HD.jpg&#39;)">
+    </div>
+  </div>
+  <div class="col-12 col-sm-6 col-md-3">
+    <div class="card shadow-lg bg-dark border-0" style="transition: transform 0.2s ease-out; perspective: 1000px;" id="tilt-card-17">
+      <img src="./AllCars_files/toyota_gr_supra_sport_top_concept_2020_4k-HD.jpg" class="card-img-top rounded-2" style="height: 210px; object-fit: cover;" alt="Car Image 18" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImageModal(&#39;https://www.hdcarwallpapers.com/walls/toyota_gr_supra_sport_top_concept_2020_4k-HD.jpg&#39;)">
+    </div>
+  </div>
+  <div class="col-12 col-sm-6 col-md-3">
+    <div class="card shadow-lg bg-dark border-0" style="transition: transform 0.2s ease-out; perspective: 1000px;" id="tilt-card-18">
+      <img src="./AllCars_files/rolls_royce_phantom_ewb_chengdu_2018_4k_2-HD.jpg" class="card-img-top rounded-2" style="height: 210px; object-fit: cover;" alt="Car Image 19" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImageModal(&#39;https://www.hdcarwallpapers.com/walls/rolls_royce_phantom_ewb_chengdu_2018_4k_2-HD.jpg&#39;)">
+    </div>
+  </div>
+  <div class="col-12 col-sm-6 col-md-3">
+    <div class="card shadow-lg bg-dark border-0" style="transition: transform 0.2s ease-out; perspective: 1000px;" id="tilt-card-19">
+      <img src="./AllCars_files/mercedes_benz_amg_s_63_e_performance_8k-HD.jpg" class="card-img-top rounded-2" style="height: 210px; object-fit: cover;" alt="Car Image 20" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImageModal(&#39;https://www.hdcarwallpapers.com/walls/mercedes_benz_amg_s_63_e_performance_8k-HD.jpg&#39;)">
+    </div>
+  </div>
+  <div class="col-12 col-sm-6 col-md-3">
+    <div class="card shadow-lg bg-dark border-0" style="transition: transform 0.2s ease-out; perspective: 1000px;" id="tilt-card-20">
+      <img src="./AllCars_files/bmw_concept_speedtop_2025_5k-HD.jpg" class="card-img-top rounded-2" style="height: 210px; object-fit: cover;" alt="Car Image 21" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImageModal(&#39;https://www.hdcarwallpapers.com/walls/bmw_concept_speedtop_2025_5k-HD.jpg&#39;)">
+    </div>
+  </div>
+  <div class="col-12 col-sm-6 col-md-3">
+    <div class="card shadow-lg bg-dark border-0" style="transition: transform 0.2s ease-out; perspective: 1000px;" id="tilt-card-21">
+      <img src="./AllCars_files/bugatti_chiron_pur_sport-HD.jpg" class="card-img-top rounded-2" style="height: 210px; object-fit: cover;" alt="Car Image 22" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImageModal(&#39;https://www.hdcarwallpapers.com/walls/bugatti_chiron_pur_sport-HD.jpg&#39;)">
+    </div>
+  </div>
+  <div class="col-12 col-sm-6 col-md-3">
+    <div class="card shadow-lg bg-dark border-0" style="transition: transform 0.2s ease-out; perspective: 1000px;" id="tilt-card-22">
+      <img src="./AllCars_files/ferrari_monza_sp2_2-HD.jpg" class="card-img-top rounded-2" style="height: 210px; object-fit: cover;" alt="Car Image 23" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImageModal(&#39;https://www.hdcarwallpapers.com/walls/ferrari_monza_sp2_2-HD.jpg&#39;)">
+    </div>
+  </div>
+  <div class="col-12 col-sm-6 col-md-3">
+    <div class="card shadow-lg bg-dark border-0" style="transition: transform 0.2s ease-out; perspective: 1000px;" id="tilt-card-23">
+      <img src="./AllCars_files/mercedes_amg_gt_63_4matic__2023_4k-HD.jpg" class="card-img-top rounded-2" style="height: 210px; object-fit: cover;" alt="Car Image 24" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImageModal(&#39;https://www.hdcarwallpapers.com/walls/mercedes_amg_gt_63_4matic__2023_4k-HD.jpg&#39;)">
+    </div>
+  </div>
+  <div class="col-12 col-sm-6 col-md-3">
+    <div class="card shadow-lg bg-dark border-0" style="transition: transform 0.2s ease-out; perspective: 1000px;" id="tilt-card-24">
+      <img src="./AllCars_files/ford_f_150_lariat_fx4_off_road_package_2024-HD.jpg" class="card-img-top rounded-2" style="height: 210px; object-fit: cover;" alt="Car Image 25" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImageModal(&#39;https://www.hdcarwallpapers.com/walls/ford_f_150_lariat_fx4_off_road_package_2024-HD.jpg&#39;)">
+    </div>
+  </div>
+  <div class="col-12 col-sm-6 col-md-3">
+    <div class="card shadow-lg bg-dark border-0" style="transition: transform 0.2s ease-out; perspective: 1000px;" id="tilt-card-25">
+      <img src="./AllCars_files/lamborghini_huracan_evo_rwd_4k_4-HD.jpg" class="card-img-top rounded-2" style="height: 210px; object-fit: cover;" alt="Car Image 26" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImageModal(&#39;https://www.hdcarwallpapers.com/walls/lamborghini_huracan_evo_rwd_4k_4-HD.jpg&#39;)">
+    </div>
+  </div>
+  <div class="col-12 col-sm-6 col-md-3">
+    <div class="card shadow-lg bg-dark border-0" style="transition: transform 0.2s ease-out; perspective: 1000px;" id="tilt-card-26">
+      <img src="./AllCars_files/manhart_sl700r_2023_4k-HD.jpg" class="card-img-top rounded-2" style="height: 210px; object-fit: cover;" alt="Car Image 27" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImageModal(&#39;https://www.hdcarwallpapers.com/walls/manhart_sl700r_2023_4k-HD.jpg&#39;)">
+    </div>
+  </div>
+  <div class="col-12 col-sm-6 col-md-3">
+    <div class="card shadow-lg bg-dark border-0" style="transition: transform 0.2s ease-out; perspective: 1000px;" id="tilt-card-27">
+      <img src="./AllCars_files/mansory_rolls_royce_cullinan_coastline_5k-HD.jpg" class="card-img-top rounded-2" style="height: 210px; object-fit: cover;" alt="Car Image 28" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImageModal(&#39;https://www.hdcarwallpapers.com/walls/mansory_rolls_royce_cullinan_coastline_5k-HD.jpg&#39;)">
+    </div>
+  </div>
+  <div class="col-12 col-sm-6 col-md-3">
+    <div class="card shadow-lg bg-dark border-0" style="transition: transform 0.2s ease-out; perspective: 1000px;" id="tilt-card-28">
+      <img src="./AllCars_files/range_rover_sport_p530_4k-HD.jpg" class="card-img-top rounded-2" style="height: 210px; object-fit: cover;" alt="Car Image 29" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImageModal(&#39;https://www.hdcarwallpapers.com/walls/range_rover_sport_p530_4k-HD.jpg&#39;)">
+    </div>
+  </div>
+  <div class="col-12 col-sm-6 col-md-3">
+    <div class="card shadow-lg bg-dark border-0" style="transition: transform 0.2s ease-out; perspective: 1000px;" id="tilt-card-29">
+      <img src="./AllCars_files/2025_hennessey_super_venom_mustang_dark_horse-HD.jpg" class="card-img-top rounded-2" style="height: 210px; object-fit: cover;" alt="Car Image 30" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImageModal(&#39;https://www.hdcarwallpapers.com/walls/2025_hennessey_super_venom_mustang_dark_horse-HD.jpg&#39;)">
+    </div>
+  </div>
+  <div class="col-12 col-sm-6 col-md-3">
+    <div class="card shadow-lg bg-dark border-0" style="transition: transform 0.2s ease-out; perspective: 1000px;" id="tilt-card-30">
+      <img src="./AllCars_files/bmw_m5_m_performance_parts_5k_2-HD.jpg" class="card-img-top rounded-2" style="height: 210px; object-fit: cover;" alt="Car Image 31" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImageModal(&#39;https://www.hdcarwallpapers.com/walls/bmw_m5_m_performance_parts_5k_2-HD.jpg&#39;)">
+    </div>
+  </div>
+  <div class="col-12 col-sm-6 col-md-3">
+    <div class="card shadow-lg bg-dark border-0" style="transition: transform 0.2s ease-out; perspective: 1000px;" id="tilt-card-31">
+      <img src="./AllCars_files/cool_bugatti_chiron_super_sport-HD.jpg" class="card-img-top rounded-2" style="height: 210px; object-fit: cover;" alt="Car Image 32" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImageModal(&#39;https://www.hdcarwallpapers.com/walls/cool_bugatti_chiron_super_sport-HD.jpg&#39;)">
+    </div>
+  </div>
+  <div class="col-12 col-sm-6 col-md-3">
+    <div class="card shadow-lg bg-dark border-0" style="transition: transform 0.2s ease-out; perspective: 1000px;" id="tilt-card-32">
+      <img src="./AllCars_files/ferrari_296_speciale_a_2025-HD.jpg" class="card-img-top rounded-2" style="height: 210px; object-fit: cover;" alt="Car Image 33" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImageModal(&#39;https://www.hdcarwallpapers.com/walls/ferrari_296_speciale_a_2025-HD.jpg&#39;)">
+    </div>
+  </div>
+  <div class="col-12 col-sm-6 col-md-3">
+    <div class="card shadow-lg bg-dark border-0" style="transition: transform 0.2s ease-out; perspective: 1000px;" id="tilt-card-33">
+      <img src="./AllCars_files/2025_ford_maverick_lariat-HD.jpg" class="card-img-top rounded-2" style="height: 210px; object-fit: cover;" alt="Car Image 34" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImageModal(&#39;https://www.hdcarwallpapers.com/walls/2025_ford_maverick_lariat-HD.jpg&#39;)">
+    </div>
+  </div>
+  <div class="col-12 col-sm-6 col-md-3">
+    <div class="card shadow-lg bg-dark border-0" style="transition: transform 0.2s ease-out; perspective: 1000px;" id="tilt-card-34">
+      <img src="./AllCars_files/lamborghini_sian_fkp_37_8k_black-HD.jpg" class="card-img-top rounded-2" style="height: 210px; object-fit: cover;" alt="Car Image 35" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImageModal(&#39;https://www.hdcarwallpapers.com/walls/lamborghini_sian_fkp_37_8k_black-HD.jpg&#39;)">
+    </div>
+  </div>
+  <div class="col-12 col-sm-6 col-md-3">
+    <div class="card shadow-lg bg-dark border-0" style="transition: transform 0.2s ease-out; perspective: 1000px;" id="tilt-card-35">
+      <img src="./AllCars_files/mercedes_amg_s_63_e_performance_2024_8k-HD.jpg" class="card-img-top rounded-2" style="height: 210px; object-fit: cover;" alt="Car Image 36" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImageModal(&#39;https://www.hdcarwallpapers.com/walls/mercedes_amg_s_63_e_performance_2024_8k-HD.jpg&#39;)">
+    </div>
+  </div>
+  <div class="col-12 col-sm-6 col-md-3">
+    <div class="card shadow-lg bg-dark border-0" style="transition: transform 0.2s ease-out; perspective: 1000px;" id="tilt-card-36">
+      <img src="./AllCars_files/2025_ford_mustang_gt_convertible_60th_anniversary_package-HD.jpg" class="card-img-top rounded-2" style="height: 210px; object-fit: cover;" alt="Car Image 37" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImageModal(&#39;https://www.hdcarwallpapers.com/walls/2025_ford_mustang_gt_convertible_60th_anniversary_package-HD.jpg&#39;)">
+    </div>
+  </div>
+  <div class="col-12 col-sm-6 col-md-3">
+    <div class="card shadow-lg bg-dark border-0" style="transition: transform 0.2s ease-out; perspective: 1000px;" id="tilt-card-37">
+      <img src="./AllCars_files/range_rover_sv_serenity_lwb_2022_4k_8k-HD.jpg" class="card-img-top rounded-2" style="height: 210px; object-fit: cover;" alt="Car Image 38" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImageModal(&#39;https://www.hdcarwallpapers.com/walls/range_rover_sv_serenity_lwb_2022_4k_8k-HD.jpg&#39;)">
+    </div>
+  </div>
+  <div class="col-12 col-sm-6 col-md-3">
+    <div class="card shadow-lg bg-dark border-0" style="transition: transform 0.2s ease-out; perspective: 1000px;" id="tilt-card-38">
+      <img src="./AllCars_files/rolls_royce_wraith_5k_2-HD.jpg" class="card-img-top rounded-2" style="height: 210px; object-fit: cover;" alt="Car Image 39" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImageModal(&#39;https://www.hdcarwallpapers.com/walls/rolls_royce_wraith_5k_2-HD.jpg&#39;)">
+    </div>
+  </div>
+  <div class="col-12 col-sm-6 col-md-3">
+    <div class="card shadow-lg bg-dark border-0" style="transition: transform 0.2s ease-out; perspective: 1000px;" id="tilt-card-39">
+      <img src="./AllCars_files/toyota_supra_mk4_retro_ai-HD.jpg" class="card-img-top rounded-2" style="height: 210px; object-fit: cover;" alt="Car Image 40" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImageModal(&#39;https://www.hdcarwallpapers.com/walls/toyota_supra_mk4_retro_ai-HD.jpg&#39;)">
+    </div>
+  </div>
+  <div class="col-12 col-sm-6 col-md-3">
+    <div class="card shadow-lg bg-dark border-0" style="transition: transform 0.2s ease-out; perspective: 1000px;" id="tilt-card-40">
+      <img src="./AllCars_files/bmw_m3_cs_8k_4-HD.jpg" class="card-img-top rounded-2" style="height: 210px; object-fit: cover;" alt="Car Image 41" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImageModal(&#39;https://www.hdcarwallpapers.com/walls/bmw_m3_cs_8k_4-HD.jpg&#39;)">
+    </div>
+  </div>
+  <div class="col-12 col-sm-6 col-md-3">
+    <div class="card shadow-lg bg-dark border-0" style="transition: transform 0.2s ease-out; perspective: 1000px;" id="tilt-card-41">
+      <img src="./AllCars_files/bugatti_chiron_pur_sport_8k_2-HD.jpg" class="card-img-top rounded-2" style="height: 210px; object-fit: cover;" alt="Car Image 42" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImageModal(&#39;https://www.hdcarwallpapers.com/walls/bugatti_chiron_pur_sport_8k_2-HD.jpg&#39;)">
+    </div>
+  </div>
+  <div class="col-12 col-sm-6 col-md-3">
+    <div class="card shadow-lg bg-dark border-0" style="transition: transform 0.2s ease-out; perspective: 1000px;" id="tilt-card-42">
+      <img src="./AllCars_files/novitec_ferrari_purosangue_esteso_2025-HD.jpg" class="card-img-top rounded-2" style="height: 210px; object-fit: cover;" alt="Car Image 43" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImageModal(&#39;https://www.hdcarwallpapers.com/walls/novitec_ferrari_purosangue_esteso_2025-HD.jpg&#39;)">
+    </div>
+  </div>
+  <div class="col-12 col-sm-6 col-md-3">
+    <div class="card shadow-lg bg-dark border-0" style="transition: transform 0.2s ease-out; perspective: 1000px;" id="tilt-card-43">
+      <img src="./AllCars_files/ford_explorer_st_2025_4k-HD.jpg" class="card-img-top rounded-2" style="height: 210px; object-fit: cover;" alt="Car Image 44" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImageModal(&#39;https://www.hdcarwallpapers.com/walls/ford_explorer_st_2025_4k-HD.jpg&#39;)">
+    </div>
+  </div>
+  <div class="col-12 col-sm-6 col-md-3">
+    <div class="card shadow-lg bg-dark border-0" style="transition: transform 0.2s ease-out; perspective: 1000px;" id="tilt-card-44">
+      <img src="./AllCars_files/lamborghini_huracan_tecnica-HD.jpg" class="card-img-top rounded-2" style="height: 210px; object-fit: cover;" alt="Car Image 45" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImageModal(&#39;https://www.hdcarwallpapers.com/walls/lamborghini_huracan_tecnica-HD.jpg&#39;)">
+    </div>
+  </div>
+  <div class="col-12 col-sm-6 col-md-3">
+    <div class="card shadow-lg bg-dark border-0" style="transition: transform 0.2s ease-out; perspective: 1000px;" id="tilt-card-45">
+      <img src="./AllCars_files/mercedes_amg_gt_63_s_e_performance_4_door_coupe_2022_2_5k_2-HD.jpg" class="card-img-top rounded-2" style="height: 210px; object-fit: cover;" alt="Car Image 46" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImageModal(&#39;https://www.hdcarwallpapers.com/walls/mercedes_amg_gt_63_s_e_performance_4_door_coupe_2022_2_5k_2-HD.jpg&#39;)">
+    </div>
+  </div>
+  <div class="col-12 col-sm-6 col-md-3">
+    <div class="card shadow-lg bg-dark border-0" style="transition: transform 0.2s ease-out; perspective: 1000px;" id="tilt-card-46">
+      <img src="./AllCars_files/ford_mustang_gt_convertible_2025-HD.jpg" class="card-img-top rounded-2" style="height: 210px; object-fit: cover;" alt="Car Image 47" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImageModal(&#39;https://www.hdcarwallpapers.com/walls/ford_mustang_gt_convertible_2025-HD.jpg&#39;)">
+    </div>
+  </div>
+  <div class="col-12 col-sm-6 col-md-3">
+    <div class="card shadow-lg bg-dark border-0" style="transition: transform 0.2s ease-out; perspective: 1000px;" id="tilt-card-47">
+      <img src="./AllCars_files/2025_range_rover_sport_sv_park_city_edition-HD.jpg" class="card-img-top rounded-2" style="height: 210px; object-fit: cover;" alt="Car Image 48" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImageModal(&#39;https://www.hdcarwallpapers.com/walls/2025_range_rover_sport_sv_park_city_edition-HD.jpg&#39;)">
+    </div>
+  </div>
+  <div class="col-12 col-sm-6 col-md-3">
+    <div class="card shadow-lg bg-dark border-0" style="transition: transform 0.2s ease-out; perspective: 1000px;" id="tilt-card-48">
+      <img src="./AllCars_files/rolls_royce_la_rose_noire_droptail_2023-HD.jpg" class="card-img-top rounded-2" style="height: 210px; object-fit: cover;" alt="Car Image 49" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImageModal(&#39;https://www.hdcarwallpapers.com/walls/rolls_royce_la_rose_noire_droptail_2023-HD.jpg&#39;)">
+    </div>
+  </div>
+  <div class="col-12 col-sm-6 col-md-3">
+    <div class="card shadow-lg bg-dark border-0" style="transition: transform 0.2s ease-out; perspective: 1000px;" id="tilt-card-49">
+      <img src="./AllCars_files/toyota_supra_a90_4k-HD.jpg" class="card-img-top rounded-2" style="height: 210px; object-fit: cover;" alt="Car Image 50" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImageModal(&#39;https://www.hdcarwallpapers.com/walls/toyota_supra_a90_4k-HD.jpg&#39;)">
+    </div>
+  </div>
+  <div class="col-12 col-sm-6 col-md-3">
+    <div class="card shadow-lg bg-dark border-0" style="transition: transform 0.2s ease-out; perspective: 1000px;" id="tilt-card-50">
+      <img src="./AllCars_files/bmw_m4_competition_m_xdrive_cabrio_2024_front-HD.jpg" class="card-img-top rounded-2" style="height: 210px; object-fit: cover;" alt="Car Image 51" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImageModal(&#39;https://www.hdcarwallpapers.com/walls/bmw_m4_competition_m_xdrive_cabrio_2024_front-HD.jpg&#39;)">
+    </div>
+  </div>
+  <div class="col-12 col-sm-6 col-md-3">
+    <div class="card shadow-lg bg-dark border-0" style="transition: transform 0.2s ease-out; perspective: 1000px;" id="tilt-card-51">
+      <img src="./AllCars_files/bugatti_bolide_hypercar_4k-HD.jpg" class="card-img-top rounded-2" style="height: 210px; object-fit: cover;" alt="Car Image 52" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImageModal(&#39;https://www.hdcarwallpapers.com/walls/bugatti_bolide_hypercar_4k-HD.jpg&#39;)">
+    </div>
+  </div>
+  <div class="col-12 col-sm-6 col-md-3">
+    <div class="card shadow-lg bg-dark border-0" style="transition: transform 0.2s ease-out; perspective: 1000px;" id="tilt-card-52">
+      <img src="./AllCars_files/ferrari_sf90_5k_3-HD.jpg" class="card-img-top rounded-2" style="height: 210px; object-fit: cover;" alt="Car Image 53" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImageModal(&#39;https://www.hdcarwallpapers.com/walls/ferrari_sf90_5k_3-HD.jpg&#39;)">
+    </div>
+  </div>
+  <div class="col-12 col-sm-6 col-md-3">
+    <div class="card shadow-lg bg-dark border-0" style="transition: transform 0.2s ease-out; perspective: 1000px;" id="tilt-card-53">
+      <img src="./AllCars_files/ford_bronco_heritage_limited_edition_4_door-HD.jpg" class="card-img-top rounded-2" style="height: 210px; object-fit: cover;" alt="Car Image 54" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImageModal(&#39;https://www.hdcarwallpapers.com/walls/ford_bronco_heritage_limited_edition_4_door-HD.jpg&#39;)">
+    </div>
+  </div>
+  <div class="col-12 col-sm-6 col-md-3">
+    <div class="card shadow-lg bg-dark border-0" style="transition: transform 0.2s ease-out; perspective: 1000px;" id="tilt-card-54">
+      <img src="./AllCars_files/lamborghini_huracan_black_underground_racing_twin_turbo-HD.jpg" class="card-img-top rounded-2" style="height: 210px; object-fit: cover;" alt="Car Image 55" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImageModal(&#39;https://www.hdcarwallpapers.com/walls/lamborghini_huracan_black_underground_racing_twin_turbo-HD.jpg&#39;)">
+    </div>
+  </div>
+  <div class="col-12 col-sm-6 col-md-3">
+    <div class="card shadow-lg bg-dark border-0" style="transition: transform 0.2s ease-out; perspective: 1000px;" id="tilt-card-55">
+      <img src="./AllCars_files/mercedes_amg_sl_63_4matic__2023-HD.jpg" class="card-img-top rounded-2" style="height: 210px; object-fit: cover;" alt="Car Image 56" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImageModal(&#39;https://www.hdcarwallpapers.com/walls/mercedes_amg_sl_63_4matic__2023-HD.jpg&#39;)">
+    </div>
+  </div>
+  <div class="col-12 col-sm-6 col-md-3">
+    <div class="card shadow-lg bg-dark border-0" style="transition: transform 0.2s ease-out; perspective: 1000px;" id="tilt-card-56">
+      <img src="./AllCars_files/2024_rtr_ford_mustang_s650_5k-HD.jpg" class="card-img-top rounded-2" style="height: 210px; object-fit: cover;" alt="Car Image 57" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImageModal(&#39;https://www.hdcarwallpapers.com/walls/2024_rtr_ford_mustang_s650_5k-HD.jpg&#39;)">
+    </div>
+  </div>
+  <div class="col-12 col-sm-6 col-md-3">
+    <div class="card shadow-lg bg-dark border-0" style="transition: transform 0.2s ease-out; perspective: 1000px;" id="tilt-card-57">
+      <img src="./AllCars_files/range_rover_velar_p400e_autobiography_2023_5k-HD.jpg" class="card-img-top rounded-2" style="height: 210px; object-fit: cover;" alt="Car Image 58" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImageModal(&#39;https://www.hdcarwallpapers.com/walls/range_rover_velar_p400e_autobiography_2023_5k-HD.jpg&#39;)">
+    </div>
+  </div>
+  <div class="col-12 col-sm-6 col-md-3">
+    <div class="card shadow-lg bg-dark border-0" style="transition: transform 0.2s ease-out; perspective: 1000px;" id="tilt-card-58">
+      <img src="./AllCars_files/mansory_rolls_royce_dawn_silver_bullet_softkit_2021_4k_8k_2-HD.jpg" class="card-img-top rounded-2" style="height: 210px; object-fit: cover;" alt="Car Image 59" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImageModal(&#39;https://www.hdcarwallpapers.com/walls/mansory_rolls_royce_dawn_silver_bullet_softkit_2021_4k_8k_2-HD.jpg&#39;)">
+    </div>
+  </div>
+  <div class="col-12 col-sm-6 col-md-3">
+    <div class="card shadow-lg bg-dark border-0" style="transition: transform 0.2s ease-out; perspective: 1000px;" id="tilt-card-59">
+      <img src="./AllCars_files/adro_toyota_gr_supra_mk5_facelift_kit_4k-HD.jpg" class="card-img-top rounded-2" style="height: 210px; object-fit: cover;" alt="Car Image 60" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImageModal(&#39;https://www.hdcarwallpapers.com/walls/adro_toyota_gr_supra_mk5_facelift_kit_4k-HD.jpg&#39;)">
+    </div>
+  </div>
+  <div class="col-12 col-sm-6 col-md-3">
+    <div class="card shadow-lg bg-dark border-0" style="transition: transform 0.2s ease-out; perspective: 1000px;" id="tilt-card-60">
+      <img src="./AllCars_files/blue_bmw_m4_5k-HD.jpg" class="card-img-top rounded-2" style="height: 210px; object-fit: cover;" alt="Car Image 61" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImageModal(&#39;https://www.hdcarwallpapers.com/walls/blue_bmw_m4_5k-HD.jpg&#39;)">
+    </div>
+  </div>
+  <div class="col-12 col-sm-6 col-md-3">
+    <div class="card shadow-lg bg-dark border-0" style="transition: transform 0.2s ease-out; perspective: 1000px;" id="tilt-card-61">
+      <img src="./AllCars_files/bugatti_chiron_super_sport-HD.jpg" class="card-img-top rounded-2" style="height: 210px; object-fit: cover;" alt="Car Image 62" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImageModal(&#39;https://www.hdcarwallpapers.com/walls/bugatti_chiron_super_sport-HD.jpg&#39;)">
+    </div>
+  </div>
+  <div class="col-12 col-sm-6 col-md-3">
+    <div class="card shadow-lg bg-dark border-0" style="transition: transform 0.2s ease-out; perspective: 1000px;" id="tilt-card-62">
+      <img src="./AllCars_files/novitec_ferrari_296_gtb_n_largo_2024_8k_2-HD.jpg" class="card-img-top rounded-2" style="height: 210px; object-fit: cover;" alt="Car Image 63" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImageModal(&#39;https://www.hdcarwallpapers.com/walls/novitec_ferrari_296_gtb_n_largo_2024_8k_2-HD.jpg&#39;)">
+    </div>
+  </div>
+  <div class="col-12 col-sm-6 col-md-3">
+    <div class="card shadow-lg bg-dark border-0" style="transition: transform 0.2s ease-out; perspective: 1000px;" id="tilt-card-63">
+      <img src="./AllCars_files/ford_raptor_t1__2024_8k-HD.jpg" class="card-img-top rounded-2" style="height: 210px; object-fit: cover;" alt="Car Image 64" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImageModal(&#39;https://www.hdcarwallpapers.com/walls/ford_raptor_t1__2024_8k-HD.jpg&#39;)">
+    </div>
+  </div>
+  <div class="col-12 col-sm-6 col-md-3">
+    <div class="card shadow-lg bg-dark border-0" style="transition: transform 0.2s ease-out; perspective: 1000px;" id="tilt-card-64">
+      <img src="./AllCars_files/lamborghini_urus_performante_polizia-HD.jpg" class="card-img-top rounded-2" style="height: 210px; object-fit: cover;" alt="Car Image 65" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImageModal(&#39;https://www.hdcarwallpapers.com/walls/lamborghini_urus_performante_polizia-HD.jpg&#39;)">
+    </div>
+  </div>
+  <div class="col-12 col-sm-6 col-md-3">
+    <div class="card shadow-lg bg-dark border-0" style="transition: transform 0.2s ease-out; perspective: 1000px;" id="tilt-card-65">
+      <img src="./AllCars_files/2017_mercedes_benz_e_class_coupe_amg_2-HD.jpg" class="card-img-top rounded-2" style="height: 210px; object-fit: cover;" alt="Car Image 66" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImageModal(&#39;https://www.hdcarwallpapers.com/walls/2017_mercedes_benz_e_class_coupe_amg_2-HD.jpg&#39;)">
+    </div>
+  </div>
+  <div class="col-12 col-sm-6 col-md-3">
+    <div class="card shadow-lg bg-dark border-0" style="transition: transform 0.2s ease-out; perspective: 1000px;" id="tilt-card-66">
+      <img src="./AllCars_files/2025_ford_mustang_gtd_spirit_of_america-HD.jpg" class="card-img-top rounded-2" style="height: 210px; object-fit: cover;" alt="Car Image 67" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImageModal(&#39;https://www.hdcarwallpapers.com/walls/2025_ford_mustang_gtd_spirit_of_america-HD.jpg&#39;)">
+    </div>
+  </div>
+  <div class="col-12 col-sm-6 col-md-3">
+    <div class="card shadow-lg bg-dark border-0" style="transition: transform 0.2s ease-out; perspective: 1000px;" id="tilt-card-67">
+      <img src="./AllCars_files/range_rover_evoque_p300_hst_2021_4k-HD.jpg" class="card-img-top rounded-2" style="height: 210px; object-fit: cover;" alt="Car Image 68" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImageModal(&#39;https://www.hdcarwallpapers.com/walls/range_rover_evoque_p300_hst_2021_4k-HD.jpg&#39;)">
+    </div>
+  </div>
+  <div class="col-12 col-sm-6 col-md-3">
+    <div class="card shadow-lg bg-dark border-0" style="transition: transform 0.2s ease-out; perspective: 1000px;" id="tilt-card-68">
+      <img src="./AllCars_files/rolls_royce_boat_tail_2022_4k_8k_2-HD.jpg" class="card-img-top rounded-2" style="height: 210px; object-fit: cover;" alt="Car Image 69" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImageModal(&#39;https://www.hdcarwallpapers.com/walls/rolls_royce_boat_tail_2022_4k_8k_2-HD.jpg&#39;)">
+    </div>
+  </div>
+  <div class="col-12 col-sm-6 col-md-3">
+    <div class="card shadow-lg bg-dark border-0" style="transition: transform 0.2s ease-out; perspective: 1000px;" id="tilt-card-69">
+      <img src="./AllCars_files/toyota_supra_turbo_jdm-HD.jpg" class="card-img-top rounded-2" style="height: 210px; object-fit: cover;" alt="Car Image 70" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImageModal(&#39;https://www.hdcarwallpapers.com/walls/toyota_supra_turbo_jdm-HD.jpg&#39;)">
+    </div>
+  </div>
+  <div class="col-12 col-sm-6 col-md-3">
+    <div class="card shadow-lg bg-dark border-0" style="transition: transform 0.2s ease-out; perspective: 1000px;" id="tilt-card-70">
+      <img src="./AllCars_files/bmw_xm_2023_4k-HD.jpg" class="card-img-top rounded-2" style="height: 210px; object-fit: cover;" alt="Car Image 71" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImageModal(&#39;https://www.hdcarwallpapers.com/walls/bmw_xm_2023_4k-HD.jpg&#39;)">
+    </div>
+  </div>
+  <div class="col-12 col-sm-6 col-md-3">
+    <div class="card shadow-lg bg-dark border-0" style="transition: transform 0.2s ease-out; perspective: 1000px;" id="tilt-card-71">
+      <img src="./AllCars_files/bugatti_chiron_super_sport_300__4k-HD.jpg" class="card-img-top rounded-2" style="height: 210px; object-fit: cover;" alt="Car Image 72" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImageModal(&#39;https://www.hdcarwallpapers.com/walls/bugatti_chiron_super_sport_300__4k-HD.jpg&#39;)">
+    </div>
+  </div>
+  <div class="col-12 col-sm-6 col-md-3">
+    <div class="card shadow-lg bg-dark border-0" style="transition: transform 0.2s ease-out; perspective: 1000px;" id="tilt-card-72">
+      <img src="./AllCars_files/mansory_venatus_evo_s_2023_8k-HD.jpg" class="card-img-top rounded-2" style="height: 210px; object-fit: cover;" alt="Car Image 73" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImageModal(&#39;https://www.hdcarwallpapers.com/walls/mansory_venatus_evo_s_2023_8k-HD.jpg&#39;)">
+    </div>
+  </div>
+  <div class="col-12 col-sm-6 col-md-3">
+    <div class="card shadow-lg bg-dark border-0" style="transition: transform 0.2s ease-out; perspective: 1000px;" id="tilt-card-73">
+      <img src="./AllCars_files/ferrari_812_gts-HD.jpg" class="card-img-top rounded-2" style="height: 210px; object-fit: cover;" alt="Car Image 74" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImageModal(&#39;https://www.hdcarwallpapers.com/walls/ferrari_812_gts-HD.jpg&#39;)">
+    </div>
+  </div>
+  <div class="col-12 col-sm-6 col-md-3">
+    <div class="card shadow-lg bg-dark border-0" style="transition: transform 0.2s ease-out; perspective: 1000px;" id="tilt-card-74">
+      <img src="./AllCars_files/ford_f_150_raptor_8k_2-HD.jpg" class="card-img-top rounded-2" style="height: 210px; object-fit: cover;" alt="Car Image 75" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImageModal(&#39;https://www.hdcarwallpapers.com/walls/ford_f_150_raptor_8k_2-HD.jpg&#39;)">
+    </div>
+  </div>
+  <div class="col-12 col-sm-6 col-md-3">
+    <div class="card shadow-lg bg-dark border-0" style="transition: transform 0.2s ease-out; perspective: 1000px;" id="tilt-card-75">
+      <img src="./AllCars_files/lamborghini_revuelto_front_4k-HD.jpg" class="card-img-top rounded-2" style="height: 210px; object-fit: cover;" alt="Car Image 76" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImageModal(&#39;https://www.hdcarwallpapers.com/walls/lamborghini_revuelto_front_4k-HD.jpg&#39;)">
+    </div>
+  </div>
+  <div class="col-12 col-sm-6 col-md-3">
+    <div class="card shadow-lg bg-dark border-0" style="transition: transform 0.2s ease-out; perspective: 1000px;" id="tilt-card-76">
+      <img src="./AllCars_files/ford_mustang_gtd_performance_pack_2025_8k-HD.jpg" class="card-img-top rounded-2" style="height: 210px; object-fit: cover;" alt="Car Image 77" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImageModal(&#39;https://www.hdcarwallpapers.com/walls/ford_mustang_gtd_performance_pack_2025_8k-HD.jpg&#39;)">
+    </div>
+  </div>
+  <div class="col-12 col-sm-6 col-md-3">
+    <div class="card shadow-lg bg-dark border-0" style="transition: transform 0.2s ease-out; perspective: 1000px;" id="tilt-card-77">
+      <img src="./AllCars_files/2014_larte_design_range_rover_evoque-HD.jpg" class="card-img-top rounded-2" style="height: 210px; object-fit: cover;" alt="Car Image 78" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImageModal(&#39;https://www.hdcarwallpapers.com/walls/2014_larte_design_range_rover_evoque-HD.jpg&#39;)">
+    </div>
+  </div>
+  <div class="col-12 col-sm-6 col-md-3">
+    <div class="card shadow-lg bg-dark border-0" style="transition: transform 0.2s ease-out; perspective: 1000px;" id="tilt-card-78">
+      <img src="./AllCars_files/rolls_royce_phantom_orchid_8k-HD.jpg" class="card-img-top rounded-2" style="height: 210px; object-fit: cover;" alt="Car Image 79" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImageModal(&#39;https://www.hdcarwallpapers.com/walls/rolls_royce_phantom_orchid_8k-HD.jpg&#39;)">
+    </div>
+  </div>
+  <div class="col-12 col-sm-6 col-md-3">
+    <div class="card shadow-lg bg-dark border-0" style="transition: transform 0.2s ease-out; perspective: 1000px;" id="tilt-card-79">
+      <img src="./AllCars_files/toyota_gr_supra_lightweight_evo_2026-HD.jpg" class="card-img-top rounded-2" style="height: 210px; object-fit: cover;" alt="Car Image 80" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImageModal(&#39;https://www.hdcarwallpapers.com/walls/toyota_gr_supra_lightweight_evo_2026-HD.jpg&#39;)">
+    </div>
+  </div>
+  <div class="col-12 col-sm-6 col-md-3">
+    <div class="card shadow-lg bg-dark border-0" style="transition: transform 0.2s ease-out; perspective: 1000px;" id="tilt-card-80">
+      <img src="./AllCars_files/bmw_m4_g82_4k-HD.jpg" class="card-img-top rounded-2" style="height: 210px; object-fit: cover;" alt="Car Image 81" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImageModal(&#39;https://www.hdcarwallpapers.com/walls/bmw_m4_g82_4k-HD.jpg&#39;)">
+    </div>
+  </div>
+  <div class="col-12 col-sm-6 col-md-3">
+    <div class="card shadow-lg bg-dark border-0" style="transition: transform 0.2s ease-out; perspective: 1000px;" id="tilt-card-81">
+      <img src="./AllCars_files/bugatti_w16_mistral_2-HD.jpg" class="card-img-top rounded-2" style="height: 210px; object-fit: cover;" alt="Car Image 82" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImageModal(&#39;https://www.hdcarwallpapers.com/walls/bugatti_w16_mistral_2-HD.jpg&#39;)">
+    </div>
+  </div>
+  <div class="col-12 col-sm-6 col-md-3">
+    <div class="card shadow-lg bg-dark border-0" style="transition: transform 0.2s ease-out; perspective: 1000px;" id="tilt-card-82">
+      <img src="./AllCars_files/ferrari_296_speciale_2025_4-HD.jpg" class="card-img-top rounded-2" style="height: 210px; object-fit: cover;" alt="Car Image 83" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImageModal(&#39;https://www.hdcarwallpapers.com/walls/ferrari_296_speciale_2025_4-HD.jpg&#39;)">
+    </div>
+  </div>
+  <div class="col-12 col-sm-6 col-md-3">
+    <div class="card shadow-lg bg-dark border-0" style="transition: transform 0.2s ease-out; perspective: 1000px;" id="tilt-card-83">
+      <img src="./AllCars_files/ford_expedition_timberline_2022_5k-HD.jpg" class="card-img-top rounded-2" style="height: 210px; object-fit: cover;" alt="Car Image 84" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImageModal(&#39;https://www.hdcarwallpapers.com/walls/ford_expedition_timberline_2022_5k-HD.jpg&#39;)">
+    </div>
+  </div>
+  <div class="col-12 col-sm-6 col-md-3">
+    <div class="card shadow-lg bg-dark border-0" style="transition: transform 0.2s ease-out; perspective: 1000px;" id="tilt-card-84">
+      <img src="./AllCars_files/range_rover_autobiography_2022_5k-HD.jpg" class="card-img-top rounded-2" style="height: 210px; object-fit: cover;" alt="Car Image 85" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImageModal(&#39;https://www.hdcarwallpapers.com/walls/range_rover_autobiography_2022_5k-HD.jpg&#39;)">
+    </div>
+  </div>
+  <div class="col-12 col-sm-6 col-md-3">
+    <div class="card shadow-lg bg-dark border-0" style="transition: transform 0.2s ease-out; perspective: 1000px;" id="tilt-card-85">
+      <img src="./AllCars_files/mansory_rolls_royce_cullinan_linea_darabo_2025_5k-HD.jpg" class="card-img-top rounded-2" style="height: 210px; object-fit: cover;" alt="Car Image 86" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImageModal(&#39;https://www.hdcarwallpapers.com/walls/mansory_rolls_royce_cullinan_linea_darabo_2025_5k-HD.jpg&#39;)">
+    </div>
+  </div>
+  <div class="col-12 col-sm-6 col-md-3">
+    <div class="card shadow-lg bg-dark border-0" style="transition: transform 0.2s ease-out; perspective: 1000px;" id="tilt-card-86">
+      <img src="./AllCars_files/toyota_gr_supra_gt4_concept_2019_4k_5k-HD.jpg" class="card-img-top rounded-2" style="height: 210px; object-fit: cover;" alt="Car Image 87" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImageModal(&#39;https://www.hdcarwallpapers.com/walls/toyota_gr_supra_gt4_concept_2019_4k_5k-HD.jpg&#39;)">
+    </div>
+  </div>
+  <div class="col-12 col-sm-6 col-md-3">
+    <div class="card shadow-lg bg-dark border-0" style="transition: transform 0.2s ease-out; perspective: 1000px;" id="tilt-card-87">
+      <img src="./AllCars_files/ford_mustang_mach_e_4x_2021_5k-HD.jpg" class="card-img-top rounded-2" style="height: 210px; object-fit: cover;" alt="Car Image 88" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImageModal(&#39;https://www.hdcarwallpapers.com/walls/ford_mustang_mach_e_4x_2021_5k-HD.jpg&#39;)">
+    </div>
+  </div>
+  <div class="col-12 col-sm-6 col-md-3">
+    <div class="card shadow-lg bg-dark border-0" style="transition: transform 0.2s ease-out; perspective: 1000px;" id="tilt-card-88">
+      <img src="./AllCars_files/urban_automotive_rolls_royce_cullinan-HD.jpg" class="card-img-top rounded-2" style="height: 210px; object-fit: cover;" alt="Car Image 89" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImageModal(&#39;https://www.hdcarwallpapers.com/walls/urban_automotive_rolls_royce_cullinan-HD.jpg&#39;)">
+    </div>
+  </div>
+  <div class="col-12 col-sm-6 col-md-3">
+    <div class="card shadow-lg bg-dark border-0" style="transition: transform 0.2s ease-out; perspective: 1000px;" id="tilt-card-89">
+      <img src="./AllCars_files/manhart_supra_gr_550_2024_5k-HD.jpg" class="card-img-top rounded-2" style="height: 210px; object-fit: cover;" alt="Car Image 90" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImageModal(&#39;https://www.hdcarwallpapers.com/walls/manhart_supra_gr_550_2024_5k-HD.jpg&#39;)">
+    </div>
+  </div>
+
+    
+
+  </div>
+</div>
+
+<!-- Fullscreen Modal -->
+<div class="modal fade" id="imageModal" tabindex="-1" aria-labelledby="imageModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-fullscreen">
+    <div class="modal-content bg-black border-0">
+      <div class="modal-body p-0 position-relative">
+        <button type="button" class="btn-close btn-close-white position-absolute top-0 end-0 m-3" data-bs-dismiss="modal" aria-label="Close"></button>
+        <img id="modalImage" src="http://localhost/First_Data/All_Cars.php" class="w-100 h-100" alt="Full Image">
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Tilt and Modal Script -->
+<script>
+  const threshold = 12;
+
+      const card0 = document.getElementById('tilt-card-0');
+
+    card0.addEventListener('mousemove', function (e) {
+      const rect = card0.getBoundingClientRect();
+      const x = (e.clientX - rect.left) / rect.width - 0.5;
+      const y = (e.clientY - rect.top) / rect.height - 0.5;
+      card0.style.transform = `perspective(1000px) rotateX(${y * -threshold}deg) rotateY(${x * threshold}deg)`;
+    });
+
+    card0.addEventListener('mouseleave', function () {
+      card0.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg)';
+    });
+      const card1 = document.getElementById('tilt-card-1');
+
+    card1.addEventListener('mousemove', function (e) {
+      const rect = card1.getBoundingClientRect();
+      const x = (e.clientX - rect.left) / rect.width - 0.5;
+      const y = (e.clientY - rect.top) / rect.height - 0.5;
+      card1.style.transform = `perspective(1000px) rotateX(${y * -threshold}deg) rotateY(${x * threshold}deg)`;
+    });
+
+    card1.addEventListener('mouseleave', function () {
+      card1.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg)';
+    });
+      const card2 = document.getElementById('tilt-card-2');
+
+    card2.addEventListener('mousemove', function (e) {
+      const rect = card2.getBoundingClientRect();
+      const x = (e.clientX - rect.left) / rect.width - 0.5;
+      const y = (e.clientY - rect.top) / rect.height - 0.5;
+      card2.style.transform = `perspective(1000px) rotateX(${y * -threshold}deg) rotateY(${x * threshold}deg)`;
+    });
+
+    card2.addEventListener('mouseleave', function () {
+      card2.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg)';
+    });
+      const card3 = document.getElementById('tilt-card-3');
+
+    card3.addEventListener('mousemove', function (e) {
+      const rect = card3.getBoundingClientRect();
+      const x = (e.clientX - rect.left) / rect.width - 0.5;
+      const y = (e.clientY - rect.top) / rect.height - 0.5;
+      card3.style.transform = `perspective(1000px) rotateX(${y * -threshold}deg) rotateY(${x * threshold}deg)`;
+    });
+
+    card3.addEventListener('mouseleave', function () {
+      card3.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg)';
+    });
+      const card4 = document.getElementById('tilt-card-4');
+
+    card4.addEventListener('mousemove', function (e) {
+      const rect = card4.getBoundingClientRect();
+      const x = (e.clientX - rect.left) / rect.width - 0.5;
+      const y = (e.clientY - rect.top) / rect.height - 0.5;
+      card4.style.transform = `perspective(1000px) rotateX(${y * -threshold}deg) rotateY(${x * threshold}deg)`;
+    });
+
+    card4.addEventListener('mouseleave', function () {
+      card4.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg)';
+    });
+      const card5 = document.getElementById('tilt-card-5');
+
+    card5.addEventListener('mousemove', function (e) {
+      const rect = card5.getBoundingClientRect();
+      const x = (e.clientX - rect.left) / rect.width - 0.5;
+      const y = (e.clientY - rect.top) / rect.height - 0.5;
+      card5.style.transform = `perspective(1000px) rotateX(${y * -threshold}deg) rotateY(${x * threshold}deg)`;
+    });
+
+    card5.addEventListener('mouseleave', function () {
+      card5.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg)';
+    });
+      const card6 = document.getElementById('tilt-card-6');
+
+    card6.addEventListener('mousemove', function (e) {
+      const rect = card6.getBoundingClientRect();
+      const x = (e.clientX - rect.left) / rect.width - 0.5;
+      const y = (e.clientY - rect.top) / rect.height - 0.5;
+      card6.style.transform = `perspective(1000px) rotateX(${y * -threshold}deg) rotateY(${x * threshold}deg)`;
+    });
+
+    card6.addEventListener('mouseleave', function () {
+      card6.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg)';
+    });
+      const card7 = document.getElementById('tilt-card-7');
+
+    card7.addEventListener('mousemove', function (e) {
+      const rect = card7.getBoundingClientRect();
+      const x = (e.clientX - rect.left) / rect.width - 0.5;
+      const y = (e.clientY - rect.top) / rect.height - 0.5;
+      card7.style.transform = `perspective(1000px) rotateX(${y * -threshold}deg) rotateY(${x * threshold}deg)`;
+    });
+
+    card7.addEventListener('mouseleave', function () {
+      card7.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg)';
+    });
+      const card8 = document.getElementById('tilt-card-8');
+
+    card8.addEventListener('mousemove', function (e) {
+      const rect = card8.getBoundingClientRect();
+      const x = (e.clientX - rect.left) / rect.width - 0.5;
+      const y = (e.clientY - rect.top) / rect.height - 0.5;
+      card8.style.transform = `perspective(1000px) rotateX(${y * -threshold}deg) rotateY(${x * threshold}deg)`;
+    });
+
+    card8.addEventListener('mouseleave', function () {
+      card8.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg)';
+    });
+      const card9 = document.getElementById('tilt-card-9');
+
+    card9.addEventListener('mousemove', function (e) {
+      const rect = card9.getBoundingClientRect();
+      const x = (e.clientX - rect.left) / rect.width - 0.5;
+      const y = (e.clientY - rect.top) / rect.height - 0.5;
+      card9.style.transform = `perspective(1000px) rotateX(${y * -threshold}deg) rotateY(${x * threshold}deg)`;
+    });
+
+    card9.addEventListener('mouseleave', function () {
+      card9.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg)';
+    });
+      const card10 = document.getElementById('tilt-card-10');
+
+    card10.addEventListener('mousemove', function (e) {
+      const rect = card10.getBoundingClientRect();
+      const x = (e.clientX - rect.left) / rect.width - 0.5;
+      const y = (e.clientY - rect.top) / rect.height - 0.5;
+      card10.style.transform = `perspective(1000px) rotateX(${y * -threshold}deg) rotateY(${x * threshold}deg)`;
+    });
+
+    card10.addEventListener('mouseleave', function () {
+      card10.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg)';
+    });
+      const card11 = document.getElementById('tilt-card-11');
+
+    card11.addEventListener('mousemove', function (e) {
+      const rect = card11.getBoundingClientRect();
+      const x = (e.clientX - rect.left) / rect.width - 0.5;
+      const y = (e.clientY - rect.top) / rect.height - 0.5;
+      card11.style.transform = `perspective(1000px) rotateX(${y * -threshold}deg) rotateY(${x * threshold}deg)`;
+    });
+
+    card11.addEventListener('mouseleave', function () {
+      card11.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg)';
+    });
+      const card12 = document.getElementById('tilt-card-12');
+
+    card12.addEventListener('mousemove', function (e) {
+      const rect = card12.getBoundingClientRect();
+      const x = (e.clientX - rect.left) / rect.width - 0.5;
+      const y = (e.clientY - rect.top) / rect.height - 0.5;
+      card12.style.transform = `perspective(1000px) rotateX(${y * -threshold}deg) rotateY(${x * threshold}deg)`;
+    });
+
+    card12.addEventListener('mouseleave', function () {
+      card12.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg)';
+    });
+      const card13 = document.getElementById('tilt-card-13');
+
+    card13.addEventListener('mousemove', function (e) {
+      const rect = card13.getBoundingClientRect();
+      const x = (e.clientX - rect.left) / rect.width - 0.5;
+      const y = (e.clientY - rect.top) / rect.height - 0.5;
+      card13.style.transform = `perspective(1000px) rotateX(${y * -threshold}deg) rotateY(${x * threshold}deg)`;
+    });
+
+    card13.addEventListener('mouseleave', function () {
+      card13.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg)';
+    });
+      const card14 = document.getElementById('tilt-card-14');
+
+    card14.addEventListener('mousemove', function (e) {
+      const rect = card14.getBoundingClientRect();
+      const x = (e.clientX - rect.left) / rect.width - 0.5;
+      const y = (e.clientY - rect.top) / rect.height - 0.5;
+      card14.style.transform = `perspective(1000px) rotateX(${y * -threshold}deg) rotateY(${x * threshold}deg)`;
+    });
+
+    card14.addEventListener('mouseleave', function () {
+      card14.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg)';
+    });
+      const card15 = document.getElementById('tilt-card-15');
+
+    card15.addEventListener('mousemove', function (e) {
+      const rect = card15.getBoundingClientRect();
+      const x = (e.clientX - rect.left) / rect.width - 0.5;
+      const y = (e.clientY - rect.top) / rect.height - 0.5;
+      card15.style.transform = `perspective(1000px) rotateX(${y * -threshold}deg) rotateY(${x * threshold}deg)`;
+    });
+
+    card15.addEventListener('mouseleave', function () {
+      card15.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg)';
+    });
+      const card16 = document.getElementById('tilt-card-16');
+
+    card16.addEventListener('mousemove', function (e) {
+      const rect = card16.getBoundingClientRect();
+      const x = (e.clientX - rect.left) / rect.width - 0.5;
+      const y = (e.clientY - rect.top) / rect.height - 0.5;
+      card16.style.transform = `perspective(1000px) rotateX(${y * -threshold}deg) rotateY(${x * threshold}deg)`;
+    });
+
+    card16.addEventListener('mouseleave', function () {
+      card16.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg)';
+    });
+      const card17 = document.getElementById('tilt-card-17');
+
+    card17.addEventListener('mousemove', function (e) {
+      const rect = card17.getBoundingClientRect();
+      const x = (e.clientX - rect.left) / rect.width - 0.5;
+      const y = (e.clientY - rect.top) / rect.height - 0.5;
+      card17.style.transform = `perspective(1000px) rotateX(${y * -threshold}deg) rotateY(${x * threshold}deg)`;
+    });
+
+    card17.addEventListener('mouseleave', function () {
+      card17.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg)';
+    });
+      const card18 = document.getElementById('tilt-card-18');
+
+    card18.addEventListener('mousemove', function (e) {
+      const rect = card18.getBoundingClientRect();
+      const x = (e.clientX - rect.left) / rect.width - 0.5;
+      const y = (e.clientY - rect.top) / rect.height - 0.5;
+      card18.style.transform = `perspective(1000px) rotateX(${y * -threshold}deg) rotateY(${x * threshold}deg)`;
+    });
+
+    card18.addEventListener('mouseleave', function () {
+      card18.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg)';
+    });
+      const card19 = document.getElementById('tilt-card-19');
+
+    card19.addEventListener('mousemove', function (e) {
+      const rect = card19.getBoundingClientRect();
+      const x = (e.clientX - rect.left) / rect.width - 0.5;
+      const y = (e.clientY - rect.top) / rect.height - 0.5;
+      card19.style.transform = `perspective(1000px) rotateX(${y * -threshold}deg) rotateY(${x * threshold}deg)`;
+    });
+
+    card19.addEventListener('mouseleave', function () {
+      card19.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg)';
+    });
+      const card20 = document.getElementById('tilt-card-20');
+
+    card20.addEventListener('mousemove', function (e) {
+      const rect = card20.getBoundingClientRect();
+      const x = (e.clientX - rect.left) / rect.width - 0.5;
+      const y = (e.clientY - rect.top) / rect.height - 0.5;
+      card20.style.transform = `perspective(1000px) rotateX(${y * -threshold}deg) rotateY(${x * threshold}deg)`;
+    });
+
+    card20.addEventListener('mouseleave', function () {
+      card20.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg)';
+    });
+      const card21 = document.getElementById('tilt-card-21');
+
+    card21.addEventListener('mousemove', function (e) {
+      const rect = card21.getBoundingClientRect();
+      const x = (e.clientX - rect.left) / rect.width - 0.5;
+      const y = (e.clientY - rect.top) / rect.height - 0.5;
+      card21.style.transform = `perspective(1000px) rotateX(${y * -threshold}deg) rotateY(${x * threshold}deg)`;
+    });
+
+    card21.addEventListener('mouseleave', function () {
+      card21.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg)';
+    });
+      const card22 = document.getElementById('tilt-card-22');
+
+    card22.addEventListener('mousemove', function (e) {
+      const rect = card22.getBoundingClientRect();
+      const x = (e.clientX - rect.left) / rect.width - 0.5;
+      const y = (e.clientY - rect.top) / rect.height - 0.5;
+      card22.style.transform = `perspective(1000px) rotateX(${y * -threshold}deg) rotateY(${x * threshold}deg)`;
+    });
+
+    card22.addEventListener('mouseleave', function () {
+      card22.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg)';
+    });
+      const card23 = document.getElementById('tilt-card-23');
+
+    card23.addEventListener('mousemove', function (e) {
+      const rect = card23.getBoundingClientRect();
+      const x = (e.clientX - rect.left) / rect.width - 0.5;
+      const y = (e.clientY - rect.top) / rect.height - 0.5;
+      card23.style.transform = `perspective(1000px) rotateX(${y * -threshold}deg) rotateY(${x * threshold}deg)`;
+    });
+
+    card23.addEventListener('mouseleave', function () {
+      card23.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg)';
+    });
+      const card24 = document.getElementById('tilt-card-24');
+
+    card24.addEventListener('mousemove', function (e) {
+      const rect = card24.getBoundingClientRect();
+      const x = (e.clientX - rect.left) / rect.width - 0.5;
+      const y = (e.clientY - rect.top) / rect.height - 0.5;
+      card24.style.transform = `perspective(1000px) rotateX(${y * -threshold}deg) rotateY(${x * threshold}deg)`;
+    });
+
+    card24.addEventListener('mouseleave', function () {
+      card24.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg)';
+    });
+      const card25 = document.getElementById('tilt-card-25');
+
+    card25.addEventListener('mousemove', function (e) {
+      const rect = card25.getBoundingClientRect();
+      const x = (e.clientX - rect.left) / rect.width - 0.5;
+      const y = (e.clientY - rect.top) / rect.height - 0.5;
+      card25.style.transform = `perspective(1000px) rotateX(${y * -threshold}deg) rotateY(${x * threshold}deg)`;
+    });
+
+    card25.addEventListener('mouseleave', function () {
+      card25.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg)';
+    });
+      const card26 = document.getElementById('tilt-card-26');
+
+    card26.addEventListener('mousemove', function (e) {
+      const rect = card26.getBoundingClientRect();
+      const x = (e.clientX - rect.left) / rect.width - 0.5;
+      const y = (e.clientY - rect.top) / rect.height - 0.5;
+      card26.style.transform = `perspective(1000px) rotateX(${y * -threshold}deg) rotateY(${x * threshold}deg)`;
+    });
+
+    card26.addEventListener('mouseleave', function () {
+      card26.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg)';
+    });
+      const card27 = document.getElementById('tilt-card-27');
+
+    card27.addEventListener('mousemove', function (e) {
+      const rect = card27.getBoundingClientRect();
+      const x = (e.clientX - rect.left) / rect.width - 0.5;
+      const y = (e.clientY - rect.top) / rect.height - 0.5;
+      card27.style.transform = `perspective(1000px) rotateX(${y * -threshold}deg) rotateY(${x * threshold}deg)`;
+    });
+
+    card27.addEventListener('mouseleave', function () {
+      card27.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg)';
+    });
+      const card28 = document.getElementById('tilt-card-28');
+
+    card28.addEventListener('mousemove', function (e) {
+      const rect = card28.getBoundingClientRect();
+      const x = (e.clientX - rect.left) / rect.width - 0.5;
+      const y = (e.clientY - rect.top) / rect.height - 0.5;
+      card28.style.transform = `perspective(1000px) rotateX(${y * -threshold}deg) rotateY(${x * threshold}deg)`;
+    });
+
+    card28.addEventListener('mouseleave', function () {
+      card28.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg)';
+    });
+      const card29 = document.getElementById('tilt-card-29');
+
+    card29.addEventListener('mousemove', function (e) {
+      const rect = card29.getBoundingClientRect();
+      const x = (e.clientX - rect.left) / rect.width - 0.5;
+      const y = (e.clientY - rect.top) / rect.height - 0.5;
+      card29.style.transform = `perspective(1000px) rotateX(${y * -threshold}deg) rotateY(${x * threshold}deg)`;
+    });
+
+    card29.addEventListener('mouseleave', function () {
+      card29.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg)';
+    });
+      const card30 = document.getElementById('tilt-card-30');
+
+    card30.addEventListener('mousemove', function (e) {
+      const rect = card30.getBoundingClientRect();
+      const x = (e.clientX - rect.left) / rect.width - 0.5;
+      const y = (e.clientY - rect.top) / rect.height - 0.5;
+      card30.style.transform = `perspective(1000px) rotateX(${y * -threshold}deg) rotateY(${x * threshold}deg)`;
+    });
+
+    card30.addEventListener('mouseleave', function () {
+      card30.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg)';
+    });
+      const card31 = document.getElementById('tilt-card-31');
+
+    card31.addEventListener('mousemove', function (e) {
+      const rect = card31.getBoundingClientRect();
+      const x = (e.clientX - rect.left) / rect.width - 0.5;
+      const y = (e.clientY - rect.top) / rect.height - 0.5;
+      card31.style.transform = `perspective(1000px) rotateX(${y * -threshold}deg) rotateY(${x * threshold}deg)`;
+    });
+
+    card31.addEventListener('mouseleave', function () {
+      card31.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg)';
+    });
+      const card32 = document.getElementById('tilt-card-32');
+
+    card32.addEventListener('mousemove', function (e) {
+      const rect = card32.getBoundingClientRect();
+      const x = (e.clientX - rect.left) / rect.width - 0.5;
+      const y = (e.clientY - rect.top) / rect.height - 0.5;
+      card32.style.transform = `perspective(1000px) rotateX(${y * -threshold}deg) rotateY(${x * threshold}deg)`;
+    });
+
+    card32.addEventListener('mouseleave', function () {
+      card32.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg)';
+    });
+      const card33 = document.getElementById('tilt-card-33');
+
+    card33.addEventListener('mousemove', function (e) {
+      const rect = card33.getBoundingClientRect();
+      const x = (e.clientX - rect.left) / rect.width - 0.5;
+      const y = (e.clientY - rect.top) / rect.height - 0.5;
+      card33.style.transform = `perspective(1000px) rotateX(${y * -threshold}deg) rotateY(${x * threshold}deg)`;
+    });
+
+    card33.addEventListener('mouseleave', function () {
+      card33.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg)';
+    });
+      const card34 = document.getElementById('tilt-card-34');
+
+    card34.addEventListener('mousemove', function (e) {
+      const rect = card34.getBoundingClientRect();
+      const x = (e.clientX - rect.left) / rect.width - 0.5;
+      const y = (e.clientY - rect.top) / rect.height - 0.5;
+      card34.style.transform = `perspective(1000px) rotateX(${y * -threshold}deg) rotateY(${x * threshold}deg)`;
+    });
+
+    card34.addEventListener('mouseleave', function () {
+      card34.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg)';
+    });
+      const card35 = document.getElementById('tilt-card-35');
+
+    card35.addEventListener('mousemove', function (e) {
+      const rect = card35.getBoundingClientRect();
+      const x = (e.clientX - rect.left) / rect.width - 0.5;
+      const y = (e.clientY - rect.top) / rect.height - 0.5;
+      card35.style.transform = `perspective(1000px) rotateX(${y * -threshold}deg) rotateY(${x * threshold}deg)`;
+    });
+
+    card35.addEventListener('mouseleave', function () {
+      card35.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg)';
+    });
+      const card36 = document.getElementById('tilt-card-36');
+
+    card36.addEventListener('mousemove', function (e) {
+      const rect = card36.getBoundingClientRect();
+      const x = (e.clientX - rect.left) / rect.width - 0.5;
+      const y = (e.clientY - rect.top) / rect.height - 0.5;
+      card36.style.transform = `perspective(1000px) rotateX(${y * -threshold}deg) rotateY(${x * threshold}deg)`;
+    });
+
+    card36.addEventListener('mouseleave', function () {
+      card36.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg)';
+    });
+      const card37 = document.getElementById('tilt-card-37');
+
+    card37.addEventListener('mousemove', function (e) {
+      const rect = card37.getBoundingClientRect();
+      const x = (e.clientX - rect.left) / rect.width - 0.5;
+      const y = (e.clientY - rect.top) / rect.height - 0.5;
+      card37.style.transform = `perspective(1000px) rotateX(${y * -threshold}deg) rotateY(${x * threshold}deg)`;
+    });
+
+    card37.addEventListener('mouseleave', function () {
+      card37.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg)';
+    });
+      const card38 = document.getElementById('tilt-card-38');
+
+    card38.addEventListener('mousemove', function (e) {
+      const rect = card38.getBoundingClientRect();
+      const x = (e.clientX - rect.left) / rect.width - 0.5;
+      const y = (e.clientY - rect.top) / rect.height - 0.5;
+      card38.style.transform = `perspective(1000px) rotateX(${y * -threshold}deg) rotateY(${x * threshold}deg)`;
+    });
+
+    card38.addEventListener('mouseleave', function () {
+      card38.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg)';
+    });
+      const card39 = document.getElementById('tilt-card-39');
+
+    card39.addEventListener('mousemove', function (e) {
+      const rect = card39.getBoundingClientRect();
+      const x = (e.clientX - rect.left) / rect.width - 0.5;
+      const y = (e.clientY - rect.top) / rect.height - 0.5;
+      card39.style.transform = `perspective(1000px) rotateX(${y * -threshold}deg) rotateY(${x * threshold}deg)`;
+    });
+
+    card39.addEventListener('mouseleave', function () {
+      card39.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg)';
+    });
+      const card40 = document.getElementById('tilt-card-40');
+
+    card40.addEventListener('mousemove', function (e) {
+      const rect = card40.getBoundingClientRect();
+      const x = (e.clientX - rect.left) / rect.width - 0.5;
+      const y = (e.clientY - rect.top) / rect.height - 0.5;
+      card40.style.transform = `perspective(1000px) rotateX(${y * -threshold}deg) rotateY(${x * threshold}deg)`;
+    });
+
+    card40.addEventListener('mouseleave', function () {
+      card40.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg)';
+    });
+      const card41 = document.getElementById('tilt-card-41');
+
+    card41.addEventListener('mousemove', function (e) {
+      const rect = card41.getBoundingClientRect();
+      const x = (e.clientX - rect.left) / rect.width - 0.5;
+      const y = (e.clientY - rect.top) / rect.height - 0.5;
+      card41.style.transform = `perspective(1000px) rotateX(${y * -threshold}deg) rotateY(${x * threshold}deg)`;
+    });
+
+    card41.addEventListener('mouseleave', function () {
+      card41.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg)';
+    });
+      const card42 = document.getElementById('tilt-card-42');
+
+    card42.addEventListener('mousemove', function (e) {
+      const rect = card42.getBoundingClientRect();
+      const x = (e.clientX - rect.left) / rect.width - 0.5;
+      const y = (e.clientY - rect.top) / rect.height - 0.5;
+      card42.style.transform = `perspective(1000px) rotateX(${y * -threshold}deg) rotateY(${x * threshold}deg)`;
+    });
+
+    card42.addEventListener('mouseleave', function () {
+      card42.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg)';
+    });
+      const card43 = document.getElementById('tilt-card-43');
+
+    card43.addEventListener('mousemove', function (e) {
+      const rect = card43.getBoundingClientRect();
+      const x = (e.clientX - rect.left) / rect.width - 0.5;
+      const y = (e.clientY - rect.top) / rect.height - 0.5;
+      card43.style.transform = `perspective(1000px) rotateX(${y * -threshold}deg) rotateY(${x * threshold}deg)`;
+    });
+
+    card43.addEventListener('mouseleave', function () {
+      card43.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg)';
+    });
+      const card44 = document.getElementById('tilt-card-44');
+
+    card44.addEventListener('mousemove', function (e) {
+      const rect = card44.getBoundingClientRect();
+      const x = (e.clientX - rect.left) / rect.width - 0.5;
+      const y = (e.clientY - rect.top) / rect.height - 0.5;
+      card44.style.transform = `perspective(1000px) rotateX(${y * -threshold}deg) rotateY(${x * threshold}deg)`;
+    });
+
+    card44.addEventListener('mouseleave', function () {
+      card44.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg)';
+    });
+      const card45 = document.getElementById('tilt-card-45');
+
+    card45.addEventListener('mousemove', function (e) {
+      const rect = card45.getBoundingClientRect();
+      const x = (e.clientX - rect.left) / rect.width - 0.5;
+      const y = (e.clientY - rect.top) / rect.height - 0.5;
+      card45.style.transform = `perspective(1000px) rotateX(${y * -threshold}deg) rotateY(${x * threshold}deg)`;
+    });
+
+    card45.addEventListener('mouseleave', function () {
+      card45.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg)';
+    });
+      const card46 = document.getElementById('tilt-card-46');
+
+    card46.addEventListener('mousemove', function (e) {
+      const rect = card46.getBoundingClientRect();
+      const x = (e.clientX - rect.left) / rect.width - 0.5;
+      const y = (e.clientY - rect.top) / rect.height - 0.5;
+      card46.style.transform = `perspective(1000px) rotateX(${y * -threshold}deg) rotateY(${x * threshold}deg)`;
+    });
+
+    card46.addEventListener('mouseleave', function () {
+      card46.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg)';
+    });
+      const card47 = document.getElementById('tilt-card-47');
+
+    card47.addEventListener('mousemove', function (e) {
+      const rect = card47.getBoundingClientRect();
+      const x = (e.clientX - rect.left) / rect.width - 0.5;
+      const y = (e.clientY - rect.top) / rect.height - 0.5;
+      card47.style.transform = `perspective(1000px) rotateX(${y * -threshold}deg) rotateY(${x * threshold}deg)`;
+    });
+
+    card47.addEventListener('mouseleave', function () {
+      card47.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg)';
+    });
+      const card48 = document.getElementById('tilt-card-48');
+
+    card48.addEventListener('mousemove', function (e) {
+      const rect = card48.getBoundingClientRect();
+      const x = (e.clientX - rect.left) / rect.width - 0.5;
+      const y = (e.clientY - rect.top) / rect.height - 0.5;
+      card48.style.transform = `perspective(1000px) rotateX(${y * -threshold}deg) rotateY(${x * threshold}deg)`;
+    });
+
+    card48.addEventListener('mouseleave', function () {
+      card48.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg)';
+    });
+      const card49 = document.getElementById('tilt-card-49');
+
+    card49.addEventListener('mousemove', function (e) {
+      const rect = card49.getBoundingClientRect();
+      const x = (e.clientX - rect.left) / rect.width - 0.5;
+      const y = (e.clientY - rect.top) / rect.height - 0.5;
+      card49.style.transform = `perspective(1000px) rotateX(${y * -threshold}deg) rotateY(${x * threshold}deg)`;
+    });
+
+    card49.addEventListener('mouseleave', function () {
+      card49.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg)';
+    });
+      const card50 = document.getElementById('tilt-card-50');
+
+    card50.addEventListener('mousemove', function (e) {
+      const rect = card50.getBoundingClientRect();
+      const x = (e.clientX - rect.left) / rect.width - 0.5;
+      const y = (e.clientY - rect.top) / rect.height - 0.5;
+      card50.style.transform = `perspective(1000px) rotateX(${y * -threshold}deg) rotateY(${x * threshold}deg)`;
+    });
+
+    card50.addEventListener('mouseleave', function () {
+      card50.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg)';
+    });
+      const card51 = document.getElementById('tilt-card-51');
+
+    card51.addEventListener('mousemove', function (e) {
+      const rect = card51.getBoundingClientRect();
+      const x = (e.clientX - rect.left) / rect.width - 0.5;
+      const y = (e.clientY - rect.top) / rect.height - 0.5;
+      card51.style.transform = `perspective(1000px) rotateX(${y * -threshold}deg) rotateY(${x * threshold}deg)`;
+    });
+
+    card51.addEventListener('mouseleave', function () {
+      card51.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg)';
+    });
+      const card52 = document.getElementById('tilt-card-52');
+
+    card52.addEventListener('mousemove', function (e) {
+      const rect = card52.getBoundingClientRect();
+      const x = (e.clientX - rect.left) / rect.width - 0.5;
+      const y = (e.clientY - rect.top) / rect.height - 0.5;
+      card52.style.transform = `perspective(1000px) rotateX(${y * -threshold}deg) rotateY(${x * threshold}deg)`;
+    });
+
+    card52.addEventListener('mouseleave', function () {
+      card52.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg)';
+    });
+      const card53 = document.getElementById('tilt-card-53');
+
+    card53.addEventListener('mousemove', function (e) {
+      const rect = card53.getBoundingClientRect();
+      const x = (e.clientX - rect.left) / rect.width - 0.5;
+      const y = (e.clientY - rect.top) / rect.height - 0.5;
+      card53.style.transform = `perspective(1000px) rotateX(${y * -threshold}deg) rotateY(${x * threshold}deg)`;
+    });
+
+    card53.addEventListener('mouseleave', function () {
+      card53.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg)';
+    });
+      const card54 = document.getElementById('tilt-card-54');
+
+    card54.addEventListener('mousemove', function (e) {
+      const rect = card54.getBoundingClientRect();
+      const x = (e.clientX - rect.left) / rect.width - 0.5;
+      const y = (e.clientY - rect.top) / rect.height - 0.5;
+      card54.style.transform = `perspective(1000px) rotateX(${y * -threshold}deg) rotateY(${x * threshold}deg)`;
+    });
+
+    card54.addEventListener('mouseleave', function () {
+      card54.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg)';
+    });
+      const card55 = document.getElementById('tilt-card-55');
+
+    card55.addEventListener('mousemove', function (e) {
+      const rect = card55.getBoundingClientRect();
+      const x = (e.clientX - rect.left) / rect.width - 0.5;
+      const y = (e.clientY - rect.top) / rect.height - 0.5;
+      card55.style.transform = `perspective(1000px) rotateX(${y * -threshold}deg) rotateY(${x * threshold}deg)`;
+    });
+
+    card55.addEventListener('mouseleave', function () {
+      card55.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg)';
+    });
+      const card56 = document.getElementById('tilt-card-56');
+
+    card56.addEventListener('mousemove', function (e) {
+      const rect = card56.getBoundingClientRect();
+      const x = (e.clientX - rect.left) / rect.width - 0.5;
+      const y = (e.clientY - rect.top) / rect.height - 0.5;
+      card56.style.transform = `perspective(1000px) rotateX(${y * -threshold}deg) rotateY(${x * threshold}deg)`;
+    });
+
+    card56.addEventListener('mouseleave', function () {
+      card56.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg)';
+    });
+      const card57 = document.getElementById('tilt-card-57');
+
+    card57.addEventListener('mousemove', function (e) {
+      const rect = card57.getBoundingClientRect();
+      const x = (e.clientX - rect.left) / rect.width - 0.5;
+      const y = (e.clientY - rect.top) / rect.height - 0.5;
+      card57.style.transform = `perspective(1000px) rotateX(${y * -threshold}deg) rotateY(${x * threshold}deg)`;
+    });
+
+    card57.addEventListener('mouseleave', function () {
+      card57.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg)';
+    });
+      const card58 = document.getElementById('tilt-card-58');
+
+    card58.addEventListener('mousemove', function (e) {
+      const rect = card58.getBoundingClientRect();
+      const x = (e.clientX - rect.left) / rect.width - 0.5;
+      const y = (e.clientY - rect.top) / rect.height - 0.5;
+      card58.style.transform = `perspective(1000px) rotateX(${y * -threshold}deg) rotateY(${x * threshold}deg)`;
+    });
+
+    card58.addEventListener('mouseleave', function () {
+      card58.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg)';
+    });
+      const card59 = document.getElementById('tilt-card-59');
+
+    card59.addEventListener('mousemove', function (e) {
+      const rect = card59.getBoundingClientRect();
+      const x = (e.clientX - rect.left) / rect.width - 0.5;
+      const y = (e.clientY - rect.top) / rect.height - 0.5;
+      card59.style.transform = `perspective(1000px) rotateX(${y * -threshold}deg) rotateY(${x * threshold}deg)`;
+    });
+
+    card59.addEventListener('mouseleave', function () {
+      card59.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg)';
+    });
+      const card60 = document.getElementById('tilt-card-60');
+
+    card60.addEventListener('mousemove', function (e) {
+      const rect = card60.getBoundingClientRect();
+      const x = (e.clientX - rect.left) / rect.width - 0.5;
+      const y = (e.clientY - rect.top) / rect.height - 0.5;
+      card60.style.transform = `perspective(1000px) rotateX(${y * -threshold}deg) rotateY(${x * threshold}deg)`;
+    });
+
+    card60.addEventListener('mouseleave', function () {
+      card60.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg)';
+    });
+      const card61 = document.getElementById('tilt-card-61');
+
+    card61.addEventListener('mousemove', function (e) {
+      const rect = card61.getBoundingClientRect();
+      const x = (e.clientX - rect.left) / rect.width - 0.5;
+      const y = (e.clientY - rect.top) / rect.height - 0.5;
+      card61.style.transform = `perspective(1000px) rotateX(${y * -threshold}deg) rotateY(${x * threshold}deg)`;
+    });
+
+    card61.addEventListener('mouseleave', function () {
+      card61.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg)';
+    });
+      const card62 = document.getElementById('tilt-card-62');
+
+    card62.addEventListener('mousemove', function (e) {
+      const rect = card62.getBoundingClientRect();
+      const x = (e.clientX - rect.left) / rect.width - 0.5;
+      const y = (e.clientY - rect.top) / rect.height - 0.5;
+      card62.style.transform = `perspective(1000px) rotateX(${y * -threshold}deg) rotateY(${x * threshold}deg)`;
+    });
+
+    card62.addEventListener('mouseleave', function () {
+      card62.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg)';
+    });
+      const card63 = document.getElementById('tilt-card-63');
+
+    card63.addEventListener('mousemove', function (e) {
+      const rect = card63.getBoundingClientRect();
+      const x = (e.clientX - rect.left) / rect.width - 0.5;
+      const y = (e.clientY - rect.top) / rect.height - 0.5;
+      card63.style.transform = `perspective(1000px) rotateX(${y * -threshold}deg) rotateY(${x * threshold}deg)`;
+    });
+
+    card63.addEventListener('mouseleave', function () {
+      card63.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg)';
+    });
+      const card64 = document.getElementById('tilt-card-64');
+
+    card64.addEventListener('mousemove', function (e) {
+      const rect = card64.getBoundingClientRect();
+      const x = (e.clientX - rect.left) / rect.width - 0.5;
+      const y = (e.clientY - rect.top) / rect.height - 0.5;
+      card64.style.transform = `perspective(1000px) rotateX(${y * -threshold}deg) rotateY(${x * threshold}deg)`;
+    });
+
+    card64.addEventListener('mouseleave', function () {
+      card64.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg)';
+    });
+      const card65 = document.getElementById('tilt-card-65');
+
+    card65.addEventListener('mousemove', function (e) {
+      const rect = card65.getBoundingClientRect();
+      const x = (e.clientX - rect.left) / rect.width - 0.5;
+      const y = (e.clientY - rect.top) / rect.height - 0.5;
+      card65.style.transform = `perspective(1000px) rotateX(${y * -threshold}deg) rotateY(${x * threshold}deg)`;
+    });
+
+    card65.addEventListener('mouseleave', function () {
+      card65.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg)';
+    });
+      const card66 = document.getElementById('tilt-card-66');
+
+    card66.addEventListener('mousemove', function (e) {
+      const rect = card66.getBoundingClientRect();
+      const x = (e.clientX - rect.left) / rect.width - 0.5;
+      const y = (e.clientY - rect.top) / rect.height - 0.5;
+      card66.style.transform = `perspective(1000px) rotateX(${y * -threshold}deg) rotateY(${x * threshold}deg)`;
+    });
+
+    card66.addEventListener('mouseleave', function () {
+      card66.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg)';
+    });
+      const card67 = document.getElementById('tilt-card-67');
+
+    card67.addEventListener('mousemove', function (e) {
+      const rect = card67.getBoundingClientRect();
+      const x = (e.clientX - rect.left) / rect.width - 0.5;
+      const y = (e.clientY - rect.top) / rect.height - 0.5;
+      card67.style.transform = `perspective(1000px) rotateX(${y * -threshold}deg) rotateY(${x * threshold}deg)`;
+    });
+
+    card67.addEventListener('mouseleave', function () {
+      card67.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg)';
+    });
+      const card68 = document.getElementById('tilt-card-68');
+
+    card68.addEventListener('mousemove', function (e) {
+      const rect = card68.getBoundingClientRect();
+      const x = (e.clientX - rect.left) / rect.width - 0.5;
+      const y = (e.clientY - rect.top) / rect.height - 0.5;
+      card68.style.transform = `perspective(1000px) rotateX(${y * -threshold}deg) rotateY(${x * threshold}deg)`;
+    });
+
+    card68.addEventListener('mouseleave', function () {
+      card68.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg)';
+    });
+      const card69 = document.getElementById('tilt-card-69');
+
+    card69.addEventListener('mousemove', function (e) {
+      const rect = card69.getBoundingClientRect();
+      const x = (e.clientX - rect.left) / rect.width - 0.5;
+      const y = (e.clientY - rect.top) / rect.height - 0.5;
+      card69.style.transform = `perspective(1000px) rotateX(${y * -threshold}deg) rotateY(${x * threshold}deg)`;
+    });
+
+    card69.addEventListener('mouseleave', function () {
+      card69.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg)';
+    });
+      const card70 = document.getElementById('tilt-card-70');
+
+    card70.addEventListener('mousemove', function (e) {
+      const rect = card70.getBoundingClientRect();
+      const x = (e.clientX - rect.left) / rect.width - 0.5;
+      const y = (e.clientY - rect.top) / rect.height - 0.5;
+      card70.style.transform = `perspective(1000px) rotateX(${y * -threshold}deg) rotateY(${x * threshold}deg)`;
+    });
+
+    card70.addEventListener('mouseleave', function () {
+      card70.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg)';
+    });
+      const card71 = document.getElementById('tilt-card-71');
+
+    card71.addEventListener('mousemove', function (e) {
+      const rect = card71.getBoundingClientRect();
+      const x = (e.clientX - rect.left) / rect.width - 0.5;
+      const y = (e.clientY - rect.top) / rect.height - 0.5;
+      card71.style.transform = `perspective(1000px) rotateX(${y * -threshold}deg) rotateY(${x * threshold}deg)`;
+    });
+
+    card71.addEventListener('mouseleave', function () {
+      card71.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg)';
+    });
+      const card72 = document.getElementById('tilt-card-72');
+
+    card72.addEventListener('mousemove', function (e) {
+      const rect = card72.getBoundingClientRect();
+      const x = (e.clientX - rect.left) / rect.width - 0.5;
+      const y = (e.clientY - rect.top) / rect.height - 0.5;
+      card72.style.transform = `perspective(1000px) rotateX(${y * -threshold}deg) rotateY(${x * threshold}deg)`;
+    });
+
+    card72.addEventListener('mouseleave', function () {
+      card72.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg)';
+    });
+      const card73 = document.getElementById('tilt-card-73');
+
+    card73.addEventListener('mousemove', function (e) {
+      const rect = card73.getBoundingClientRect();
+      const x = (e.clientX - rect.left) / rect.width - 0.5;
+      const y = (e.clientY - rect.top) / rect.height - 0.5;
+      card73.style.transform = `perspective(1000px) rotateX(${y * -threshold}deg) rotateY(${x * threshold}deg)`;
+    });
+
+    card73.addEventListener('mouseleave', function () {
+      card73.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg)';
+    });
+      const card74 = document.getElementById('tilt-card-74');
+
+    card74.addEventListener('mousemove', function (e) {
+      const rect = card74.getBoundingClientRect();
+      const x = (e.clientX - rect.left) / rect.width - 0.5;
+      const y = (e.clientY - rect.top) / rect.height - 0.5;
+      card74.style.transform = `perspective(1000px) rotateX(${y * -threshold}deg) rotateY(${x * threshold}deg)`;
+    });
+
+    card74.addEventListener('mouseleave', function () {
+      card74.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg)';
+    });
+      const card75 = document.getElementById('tilt-card-75');
+
+    card75.addEventListener('mousemove', function (e) {
+      const rect = card75.getBoundingClientRect();
+      const x = (e.clientX - rect.left) / rect.width - 0.5;
+      const y = (e.clientY - rect.top) / rect.height - 0.5;
+      card75.style.transform = `perspective(1000px) rotateX(${y * -threshold}deg) rotateY(${x * threshold}deg)`;
+    });
+
+    card75.addEventListener('mouseleave', function () {
+      card75.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg)';
+    });
+      const card76 = document.getElementById('tilt-card-76');
+
+    card76.addEventListener('mousemove', function (e) {
+      const rect = card76.getBoundingClientRect();
+      const x = (e.clientX - rect.left) / rect.width - 0.5;
+      const y = (e.clientY - rect.top) / rect.height - 0.5;
+      card76.style.transform = `perspective(1000px) rotateX(${y * -threshold}deg) rotateY(${x * threshold}deg)`;
+    });
+
+    card76.addEventListener('mouseleave', function () {
+      card76.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg)';
+    });
+      const card77 = document.getElementById('tilt-card-77');
+
+    card77.addEventListener('mousemove', function (e) {
+      const rect = card77.getBoundingClientRect();
+      const x = (e.clientX - rect.left) / rect.width - 0.5;
+      const y = (e.clientY - rect.top) / rect.height - 0.5;
+      card77.style.transform = `perspective(1000px) rotateX(${y * -threshold}deg) rotateY(${x * threshold}deg)`;
+    });
+
+    card77.addEventListener('mouseleave', function () {
+      card77.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg)';
+    });
+      const card78 = document.getElementById('tilt-card-78');
+
+    card78.addEventListener('mousemove', function (e) {
+      const rect = card78.getBoundingClientRect();
+      const x = (e.clientX - rect.left) / rect.width - 0.5;
+      const y = (e.clientY - rect.top) / rect.height - 0.5;
+      card78.style.transform = `perspective(1000px) rotateX(${y * -threshold}deg) rotateY(${x * threshold}deg)`;
+    });
+
+    card78.addEventListener('mouseleave', function () {
+      card78.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg)';
+    });
+      const card79 = document.getElementById('tilt-card-79');
+
+    card79.addEventListener('mousemove', function (e) {
+      const rect = card79.getBoundingClientRect();
+      const x = (e.clientX - rect.left) / rect.width - 0.5;
+      const y = (e.clientY - rect.top) / rect.height - 0.5;
+      card79.style.transform = `perspective(1000px) rotateX(${y * -threshold}deg) rotateY(${x * threshold}deg)`;
+    });
+
+    card79.addEventListener('mouseleave', function () {
+      card79.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg)';
+    });
+      const card80 = document.getElementById('tilt-card-80');
+
+    card80.addEventListener('mousemove', function (e) {
+      const rect = card80.getBoundingClientRect();
+      const x = (e.clientX - rect.left) / rect.width - 0.5;
+      const y = (e.clientY - rect.top) / rect.height - 0.5;
+      card80.style.transform = `perspective(1000px) rotateX(${y * -threshold}deg) rotateY(${x * threshold}deg)`;
+    });
+
+    card80.addEventListener('mouseleave', function () {
+      card80.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg)';
+    });
+      const card81 = document.getElementById('tilt-card-81');
+
+    card81.addEventListener('mousemove', function (e) {
+      const rect = card81.getBoundingClientRect();
+      const x = (e.clientX - rect.left) / rect.width - 0.5;
+      const y = (e.clientY - rect.top) / rect.height - 0.5;
+      card81.style.transform = `perspective(1000px) rotateX(${y * -threshold}deg) rotateY(${x * threshold}deg)`;
+    });
+
+    card81.addEventListener('mouseleave', function () {
+      card81.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg)';
+    });
+      const card82 = document.getElementById('tilt-card-82');
+
+    card82.addEventListener('mousemove', function (e) {
+      const rect = card82.getBoundingClientRect();
+      const x = (e.clientX - rect.left) / rect.width - 0.5;
+      const y = (e.clientY - rect.top) / rect.height - 0.5;
+      card82.style.transform = `perspective(1000px) rotateX(${y * -threshold}deg) rotateY(${x * threshold}deg)`;
+    });
+
+    card82.addEventListener('mouseleave', function () {
+      card82.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg)';
+    });
+      const card83 = document.getElementById('tilt-card-83');
+
+    card83.addEventListener('mousemove', function (e) {
+      const rect = card83.getBoundingClientRect();
+      const x = (e.clientX - rect.left) / rect.width - 0.5;
+      const y = (e.clientY - rect.top) / rect.height - 0.5;
+      card83.style.transform = `perspective(1000px) rotateX(${y * -threshold}deg) rotateY(${x * threshold}deg)`;
+    });
+
+    card83.addEventListener('mouseleave', function () {
+      card83.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg)';
+    });
+      const card84 = document.getElementById('tilt-card-84');
+
+    card84.addEventListener('mousemove', function (e) {
+      const rect = card84.getBoundingClientRect();
+      const x = (e.clientX - rect.left) / rect.width - 0.5;
+      const y = (e.clientY - rect.top) / rect.height - 0.5;
+      card84.style.transform = `perspective(1000px) rotateX(${y * -threshold}deg) rotateY(${x * threshold}deg)`;
+    });
+
+    card84.addEventListener('mouseleave', function () {
+      card84.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg)';
+    });
+      const card85 = document.getElementById('tilt-card-85');
+
+    card85.addEventListener('mousemove', function (e) {
+      const rect = card85.getBoundingClientRect();
+      const x = (e.clientX - rect.left) / rect.width - 0.5;
+      const y = (e.clientY - rect.top) / rect.height - 0.5;
+      card85.style.transform = `perspective(1000px) rotateX(${y * -threshold}deg) rotateY(${x * threshold}deg)`;
+    });
+
+    card85.addEventListener('mouseleave', function () {
+      card85.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg)';
+    });
+      const card86 = document.getElementById('tilt-card-86');
+
+    card86.addEventListener('mousemove', function (e) {
+      const rect = card86.getBoundingClientRect();
+      const x = (e.clientX - rect.left) / rect.width - 0.5;
+      const y = (e.clientY - rect.top) / rect.height - 0.5;
+      card86.style.transform = `perspective(1000px) rotateX(${y * -threshold}deg) rotateY(${x * threshold}deg)`;
+    });
+
+    card86.addEventListener('mouseleave', function () {
+      card86.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg)';
+    });
+      const card87 = document.getElementById('tilt-card-87');
+
+    card87.addEventListener('mousemove', function (e) {
+      const rect = card87.getBoundingClientRect();
+      const x = (e.clientX - rect.left) / rect.width - 0.5;
+      const y = (e.clientY - rect.top) / rect.height - 0.5;
+      card87.style.transform = `perspective(1000px) rotateX(${y * -threshold}deg) rotateY(${x * threshold}deg)`;
+    });
+
+    card87.addEventListener('mouseleave', function () {
+      card87.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg)';
+    });
+      const card88 = document.getElementById('tilt-card-88');
+
+    card88.addEventListener('mousemove', function (e) {
+      const rect = card88.getBoundingClientRect();
+      const x = (e.clientX - rect.left) / rect.width - 0.5;
+      const y = (e.clientY - rect.top) / rect.height - 0.5;
+      card88.style.transform = `perspective(1000px) rotateX(${y * -threshold}deg) rotateY(${x * threshold}deg)`;
+    });
+
+    card88.addEventListener('mouseleave', function () {
+      card88.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg)';
+    });
+      const card89 = document.getElementById('tilt-card-89');
+
+    card89.addEventListener('mousemove', function (e) {
+      const rect = card89.getBoundingClientRect();
+      const x = (e.clientX - rect.left) / rect.width - 0.5;
+      const y = (e.clientY - rect.top) / rect.height - 0.5;
+      card89.style.transform = `perspective(1000px) rotateX(${y * -threshold}deg) rotateY(${x * threshold}deg)`;
+    });
+
+    card89.addEventListener('mouseleave', function () {
+      card89.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg)';
+    });
+  
+  // Show clicked image in modal
+  function showImageModal(imageUrl) {
+    document.getElementById('modalImage').src = imageUrl;
+  }
+</script>
+
+<!-- Bootstrap 5 JS -->
+<script src="./AllCars_files/bootstrap.bundle.min.js.download"></script>
+
+
+
+</body></html>
